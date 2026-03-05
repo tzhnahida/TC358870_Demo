@@ -23,4 +23,45 @@
       (Sort User))
     (Folder "Include Files"
       (Sort User)))
-  (Folder "Logs"))
+  (Folder "Logs")
+  (PartMRUSelector
+    (Res
+      (FullPartName "Res.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\RES.OLB")
+      (DeviceIndex "0"))
+    (LP5907MFX
+      (FullPartName "LP5907MFX.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\LP5907MFX.OLB")
+      (DeviceIndex "0"))
+    (TYPEC_16PIN
+      (FullPartName "TYPEC_16PIN.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TYPE-C_16PIN.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "27356")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn")
+      (Path "Design Resources"
+         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn"
+         "TC358870_Demo")
+      (Select "Design Resources"
+         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn"
+         "TC358870_Demo" "1_Power"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 752"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1469 28 798")
+        (Scroll "616 18")
+        (Zoom "176")
+        (Occurrence "/"))
+      (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
+      (Schematic "TC358870_Demo")
+      (Page "1_Power"))))
