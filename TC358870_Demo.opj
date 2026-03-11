@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/10/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/12/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -11,7 +11,8 @@
     (File ".\tc358870_demo.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
-    (CompileFileAddedOrDeleted "x"))
+    (CompileFileAddedOrDeleted "x")
+    (Board_sim_option "VHDL_flow"))
   (Folder "Layout")
   (Folder "Outputs")
   (Folder "Referenced Projects")
@@ -29,6 +30,18 @@
       (FullPartName "Res.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\RES.OLB")
       (DeviceIndex "0"))
+    (TVS/ESD
+      (FullPartName "TVS/ESD.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TVS.OLB")
+      (DeviceIndex "0"))
+    (Inductor
+      (FullPartName "Inductor.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\INDUCTOR.OLB")
+      (DeviceIndex "0"))
+    (AP3012KTR
+      (FullPartName "AP3012KTR.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\AP3012KTR.OLB")
+      (DeviceIndex "0"))
     (LP5907MFX
       (FullPartName "LP5907MFX.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\LP5907MFX.OLB")
@@ -42,24 +55,22 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn")
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
       (Path "Design Resources"
-         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
          "TC358870_Demo")
-      (Select "Design Resources"
-         "F:\Projects\PCB\GitHub\Public\TC358870_Demo\tc358870_demo.dsn"
-         "TC358870_Demo" "1_Power"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 752"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 776"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1469 28 798")
-        (Scroll "616 18")
+        (Placement "44 0 1 -1 -1 5 28 5 1469 28 798")
+        (Scroll "0 707")
         (Zoom "176")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
