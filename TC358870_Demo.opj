@@ -12,7 +12,6 @@
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
-    (Board_sim_option "VHDL_flow")
     (DRC_Scope "0")
     (DRC_Action "0")
     (DRC_Create_Warnings "TRUE")
@@ -68,7 +67,8 @@
     (DRC_Check_Pspice_Model_Lib_Path_Online "FALSE")
     (DRC_Run_Custom_Rules "FALSE")
     (DRC_Report_File
-       "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DRC"))
+       "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DRC")
+    (Board_sim_option "VHDL_flow"))
   (Folder "Layout")
   (Folder "Outputs"
     (File ".\tc358870_demo.drc"
@@ -84,13 +84,21 @@
       (Sort User)))
   (Folder "Logs")
   (PartMRUSelector
-    (TVS/ESD
-      (FullPartName "TVS/ESD.Normal")
-      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TVS.OLB")
+    (HDMI-A
+      (FullPartName "HDMI-A.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\HDMI.OLB")
+      (DeviceIndex "0"))
+    (CAP_NP
+      (FullPartName "CAP_NP.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\CAP.OLB")
       (DeviceIndex "0"))
     (Res
       (FullPartName "Res.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\RES.OLB")
+      (DeviceIndex "0"))
+    (TVS/ESD
+      (FullPartName "TVS/ESD.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TVS.OLB")
       (DeviceIndex "0"))
     (PMOS
       (FullPartName "PMOS.Normal")
@@ -124,30 +132,24 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "Design Cache")
+      (Path "Design Resources" ".\tc358870_demo.dsn")
+      (Path "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo")
+      (Path "Design Resources" ".\tc358870_demo.dsn" "Design Cache")
       (Path "Outputs")
-      (Select "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo" "2.DISPLAY_POWER_DRIVER"))
+      (Select "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo"
+         "2.DISPLAY_POWER_DRIVER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 400 0 592"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 623"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 799 28 638")
-        (Scroll "7 512")
-        (Zoom "138")
+        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
+        (Scroll "-58 0")
+        (Zoom "94")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -155,10 +157,20 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 799 28 638")
-        (Scroll "665 768")
-        (Zoom "200")
+        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
+        (Scroll "653 0")
+        (Zoom "180")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
-      (Page "2.DISPLAY_POWER_DRIVER"))))
+      (Page "2.DISPLAY_POWER_DRIVER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
+        (Scroll "0 0")
+        (Zoom "140")
+        (Occurrence "/"))
+      (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
+      (Schematic "TC358870_Demo")
+      (Page "3.HDMI_IN"))))
