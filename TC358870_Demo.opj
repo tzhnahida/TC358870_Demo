@@ -84,6 +84,21 @@
       (Sort User)))
   (Folder "Logs")
   (PartMRUSelector
+    (Res
+      (FullPartName "Res.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\RES.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-RL
+      (LibraryName "D:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TC358870XBG
+      (FullPartName "TC358870XBGD.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TC358870XBG.OLB")
+      (DeviceIndex "3"))
+    (IP4292CZ10
+      (FullPartName "IP4292CZ10.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\IP4292CZ10.OLB")
+      (DeviceIndex "0"))
     (HDMI-A
       (FullPartName "HDMI-A.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\HDMI.OLB")
@@ -91,10 +106,6 @@
     (CAP_NP
       (FullPartName "CAP_NP.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\CAP.OLB")
-      (DeviceIndex "0"))
-    (Res
-      (FullPartName "Res.Normal")
-      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\RES.OLB")
       (DeviceIndex "0"))
     (TVS/ESD
       (FullPartName "TVS/ESD.Normal")
@@ -132,24 +143,30 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\tc358870_demo.dsn")
-      (Path "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo")
-      (Path "Design Resources" ".\tc358870_demo.dsn" "Design Cache")
+      (Path "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
+      (Path "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo")
+      (Path "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "Design Cache")
       (Path "Outputs")
-      (Select "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo"
-         "2.DISPLAY_POWER_DRIVER"))
+      (Select "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo" "3.TC358870"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 623"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 272 0 720"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
-        (Scroll "-58 0")
-        (Zoom "94")
+        (Placement "44 0 1 -1 -1 5 28 5 1507 28 766")
+        (Scroll "485 672")
+        (Zoom "168")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -157,9 +174,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
-        (Scroll "653 0")
-        (Zoom "180")
+        (Placement "44 0 1 -1 -1 5 28 5 1507 28 766")
+        (Scroll "1502 1828")
+        (Zoom "336")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -167,10 +184,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1253 28 645")
-        (Scroll "0 0")
-        (Zoom "140")
+        (Placement "44 0 1 -1 -1 5 28 5 1507 28 766")
+        (Scroll "0 403")
+        (Zoom "168")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
-      (Page "3.HDMI_IN"))))
+      (Page "3.TC358870"))))
