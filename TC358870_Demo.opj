@@ -68,11 +68,42 @@
     (DRC_Run_Custom_Rules "FALSE")
     (DRC_Report_File
        "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DRC")
-    (Board_sim_option "VHDL_flow"))
-  (Folder "Layout")
+    (Board_sim_option "VHDL_flow")
+    ("Allegro Netlist Output Board File" ".\allegro\tc358870_demo.brd")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80"))
+  (Folder "Layout"
+    (File ".\allegro\tc358870_demo.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\tc358870_demo.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "1")))
   (Folder "Outputs"
     (File ".\tc358870_demo.drc"
-      (Type "Report")))
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -82,7 +113,17 @@
       (Sort User))
     (Folder "Include Files"
       (Sort User)))
-  (Folder "Logs")
+  (Folder "Logs"
+    (File ".\allegro\netlist.log"
+      (Type "Log File")
+      (LogFile
+         "f:\projects\pcb\github\public\tc358870_demo\allegro\netlist.log"))
+    (File ".\allegro\netrev.lst"
+      (Type "Log File")
+      (LogFile "f:\projects\pcb\github\public\tc358870_demo\allegro\netrev.lst"))
+    (File ".\allegro\eco.txt"
+      (Type "Log File")
+      (LogFile "f:\projects\pcb\github\public\tc358870_demo\allegro\eco.txt")))
   (PartMRUSelector
     (TH-6P
       (FullPartName "TH-6P.Normal")
@@ -159,11 +200,13 @@
          "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
       (Path "Design Resources"
          "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "Design Cache")
+         "TC358870_Demo")
+      (Path "Layout")
       (Path "Outputs")
+      (Path "Logs")
       (Select "Design Resources"
          "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo"))
+         "TC358870_Demo" "3.TC358870"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -174,8 +217,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "558 381")
-        (Zoom "168")
+        (Scroll "515 623")
+        (Zoom "156")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -184,7 +227,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "-158 0")
+        (Scroll "-158 5")
         (Zoom "84")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -194,7 +237,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "656 0")
+        (Scroll "656 630")
         (Zoom "168")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -203,8 +246,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 0 0 5 1336 28 716")
-        (Scroll "-38 0")
+        (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
+        (Scroll "-38 30")
         (Zoom "126")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
