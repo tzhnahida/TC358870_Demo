@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/17/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/18/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -68,7 +68,6 @@
     (DRC_Run_Custom_Rules "FALSE")
     (DRC_Report_File
        "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DRC")
-    (Board_sim_option "VHDL_flow")
     ("Allegro Netlist Output Board File" ".\allegro\tc358870_demo.brd")
     (ANNOTATE_Scope "0")
     (ANNOTATE_Mode "1")
@@ -85,13 +84,33 @@
     (Annotate_type "Default")
     (width_pages "100")
     (width_start "80")
-    (width_End "80"))
+    (width_End "80")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Board_sim_option "VHDL_flow"))
   (Folder "Layout"
     (File ".\allegro\tc358870_demo.brd"
       (Type "Board File")
       (OutputBoard ".\allegro\tc358870_demo.brd")
       (NetListPath ".\allegro")
-      (ActiveBoard "1")))
+      (ActiveBoard "1"))
+    (File ".\allegro\bf.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\bf.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0")))
   (Folder "Outputs"
     (File ".\tc358870_demo.drc"
       (Type "Report"))
@@ -123,8 +142,16 @@
       (LogFile "f:\projects\pcb\github\public\tc358870_demo\allegro\netrev.lst"))
     (File ".\allegro\eco.txt"
       (Type "Log File")
-      (LogFile "f:\projects\pcb\github\public\tc358870_demo\allegro\eco.txt")))
+      (LogFile "f:\projects\pcb\github\public\tc358870_demo\allegro\eco.txt"))
+    (File ".\allegro\genfeed.log"
+      (Type "Log File")
+      (LogFile
+         "f:\projects\pcb\github\public\tc358870_demo\allegro\genfeed.log")))
   (PartMRUSelector
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\LED.OLB")
+      (DeviceIndex "0"))
     (TH-6P
       (FullPartName "TH-6P.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\TH.OLB")
@@ -196,29 +223,25 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo")
+      (Path "Design Resources" ".\tc358870_demo.dsn")
+      (Path "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo")
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo" "3.TC358870"))
+      (Select "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo"
+         "3.TC358870"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 443 0 670"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 331 0 580"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "515 623")
-        (Zoom "156")
+        (Placement "44 0 1 -1 -1 5 28 5 1226 28 626")
+        (Scroll "-197 -2")
+        (Zoom "68")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -226,9 +249,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "-158 5")
-        (Zoom "84")
+        (Placement "44 0 1 -1 -1 5 28 5 1226 28 626")
+        (Scroll "-138 68")
+        (Zoom "78")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -236,9 +259,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "656 630")
-        (Zoom "168")
+        (Placement "44 0 1 -1 -1 5 28 5 1226 28 626")
+        (Scroll "31 386")
+        (Zoom "136")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -246,10 +269,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1336 28 716")
-        (Scroll "-38 30")
+        (Placement "44 0 1 -1 -1 5 28 5 1226 28 626")
+        (Scroll "0 139")
         (Zoom "126")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
-      (Page "4.LS029B3SX01"))))
+      (Page "4.LS029B3SX01")))
+  (ISPCBBASICLICENSE "false"))
