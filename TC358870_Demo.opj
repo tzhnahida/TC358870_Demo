@@ -245,21 +245,19 @@
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo" "4.LS029B3SX01"))
+      (Select "Layout" ".\allegro\tc358870_demo.brd"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 604"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 732"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 626")
-        (Scroll "-262 -2")
-        (Zoom "68")
+        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
+        (Scroll "-175 -4")
+        (Zoom "83")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -267,9 +265,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 626")
-        (Scroll "-204 0")
-        (Zoom "78")
+        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
+        (Scroll "611 118")
+        (Zoom "166")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -277,9 +275,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 626")
-        (Scroll "-262 -2")
-        (Zoom "68")
+        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
+        (Scroll "-175 -4")
+        (Zoom "83")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -287,8 +285,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 626")
-        (Scroll "713 864")
+        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
+        (Scroll "0 496")
         (Zoom "252")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
