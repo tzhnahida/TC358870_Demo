@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/19/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/23/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -245,7 +245,9 @@
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Layout" ".\allegro\tc358870_demo.brd"))
+      (Select "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo" "3.TC358870"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -266,7 +268,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "611 118")
+        (Scroll "405 668")
         (Zoom "166")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -276,8 +278,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "-175 -4")
-        (Zoom "83")
+        (Scroll "1943 1760")
+        (Zoom "332")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -286,7 +288,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "0 496")
+        (Scroll "0 295")
         (Zoom "252")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
