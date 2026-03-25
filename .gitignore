@@ -15,12 +15,7 @@
 *.txt
 # 注意：如果你的元件清单(BOM)是txt格式，请改用 !BOM.txt 来排除过滤
 
-# 3. 排除仿真与输出文件夹
-/Simulation/
-/Gerber/
-/Output/
-/Backup/
-/temp/
+
 
 # 4. 必须保留的核心设计文件 (白名单参考)
 # *.DSN (原理图)
