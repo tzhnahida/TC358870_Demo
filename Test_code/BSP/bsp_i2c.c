@@ -11,6 +11,12 @@ HAL_StatusTypeDef HAL_I2C_Write_16Bit(uint16_t DevAddress, uint16_t MemAddress, 
     HAL_Delay(5);
     if (retry_count == RETRY_COUNT)
       return hal_status;
+    if (hal_status == HAL_BUSY)
+    {
+        HAL_I2C_DeInit(&hi2c2);
+        MX_I2C2_Init();
+    }
+    
     retry_count++;
   } while (hal_status != HAL_OK && hal_status != HAL_TIMEOUT);
   return hal_status;
@@ -26,6 +32,11 @@ HAL_StatusTypeDef HAL_I2C_Read_16Bit(uint16_t DevAddress, uint16_t MemAddress, u
     HAL_Delay(5);
     if (retry_count == RETRY_COUNT)
       return hal_status;
+    if (hal_status == HAL_BUSY)
+    {
+        HAL_I2C_DeInit(&hi2c2);
+        MX_I2C2_Init();
+    }
     retry_count++;
   } while (hal_status != HAL_OK && hal_status != HAL_TIMEOUT);
   return hal_status;
@@ -41,6 +52,11 @@ HAL_StatusTypeDef HAL_I2C_Write_8Bit(uint16_t DevAddress, uint16_t MemAddress, u
     HAL_Delay(5);
     if (retry_count == RETRY_COUNT)
       return hal_status;
+    if (hal_status == HAL_BUSY)
+    {
+        HAL_I2C_DeInit(&hi2c2);
+        MX_I2C2_Init();
+    }
     retry_count++;
   } while (hal_status != HAL_OK && hal_status != HAL_TIMEOUT);
   return hal_status;
@@ -56,6 +72,11 @@ HAL_StatusTypeDef HAL_I2C_Read_8Bit(uint16_t DevAddress, uint16_t MemAddress, ui
     HAL_Delay(5);
     if (retry_count == RETRY_COUNT)
       return hal_status;
+    if (hal_status == HAL_BUSY)
+    {
+        HAL_I2C_DeInit(&hi2c2);
+        MX_I2C2_Init();
+    }
     retry_count++;
   } while (hal_status != HAL_OK && hal_status != HAL_TIMEOUT);
   return hal_status;

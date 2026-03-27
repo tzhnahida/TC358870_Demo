@@ -65,8 +65,8 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
   /* USER CODE BEGIN I2C2_MspInit 0 */
 
   /* USER CODE END I2C2_MspInit 0 */
-
     __HAL_RCC_GPIOB_CLK_ENABLE();
+
     /**I2C2 GPIO Configuration
     PB10     ------> I2C2_SCL
     PB11     ------> I2C2_SDA
@@ -75,9 +75,16 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+		HAL_GPIO_WritePin(GPIOB, 6, GPIO_PIN_SET);
+
+    HAL_GPIO_WritePin(GPIOB, 7, GPIO_PIN_SET);
+		__HAL_RCC_I2C2_CLK_ENABLE();
+ 
+
+
 
     /* I2C2 clock enable */
-    __HAL_RCC_I2C2_CLK_ENABLE();
+
   /* USER CODE BEGIN I2C2_MspInit 1 */
 
   /* USER CODE END I2C2_MspInit 1 */

@@ -19,6 +19,8 @@
 #include "main.h"
 #include "i2c.h"
 #include "gpio.h"
+#include "bsp_i2c.h"
+#include "tc358870.h"
 
 void SystemClock_Config(void);
 
@@ -26,12 +28,15 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
+TC358870_Status_t status;
+HAL_StatusTypeDef hal_status;
 int main(void)
 {
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_I2C2_Init();
+  status = TC358870_Identify();
   while (1)
   {
 		

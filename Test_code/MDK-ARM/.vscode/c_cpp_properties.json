@@ -8,12 +8,12 @@
                 "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
                 "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
                 "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Drivers\\CMSIS\\Include",
+                "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\BSP",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\MDK-ARM",
                 "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Core\\Src",
-                "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Drivers\\STM32F1xx_HAL_Driver\\Src",
-                "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\BSP"
+                "f:\\Projects\\PCB\\GitHub\\Public\\TC358870_Demo\\Test_code\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

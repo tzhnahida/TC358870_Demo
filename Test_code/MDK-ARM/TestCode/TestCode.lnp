@@ -5,6 +5,7 @@
 "testcode\i2c.o"
 "testcode\stm32f1xx_it.o"
 "testcode\stm32f1xx_hal_msp.o"
+"testcode\tc358870.o"
 "testcode\stm32f1xx_hal_gpio_ex.o"
 "testcode\stm32f1xx_hal_i2c.o"
 "testcode\stm32f1xx_hal.o"
