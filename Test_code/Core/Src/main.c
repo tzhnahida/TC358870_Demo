@@ -38,16 +38,6 @@ int main(void)
   }
 }
 
-void HAL_I2C_Write(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)
-{
-  HAL_StatusTypeDef hal_status;
-  hal_status = HAL_I2C_Mem_Write(&hi2c2, DevAddress, MemAddress, I2C_MEMADD_SIZE_16BIT, pData, Size, Timeout);
-  if (hal_status != HAL_OK)
-  {
-    Error_Handler();
-  }
-  HAL_Delay(5);
-}
 
 
 
