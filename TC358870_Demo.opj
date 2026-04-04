@@ -279,18 +279,20 @@
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Layout" ".\allegro\tc358870_demo.brd"))
+      (Select "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 631"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 811"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
-        (Scroll "0 0")
+        (Placement "44 0 1 -1 -1 5 28 5 1515 28 833")
+        (Scroll "-201 -6")
         (Zoom "92")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -299,9 +301,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
-        (Scroll "1237 851")
-        (Zoom "192")
+        (Placement "44 0 1 -1 -1 5 28 5 1515 28 833")
+        (Scroll "-201 -6")
+        (Zoom "92")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -309,9 +311,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
-        (Scroll "1124 891")
-        (Zoom "184")
+        (Placement "44 0 1 -1 -1 5 28 5 1515 28 833")
+        (Scroll "-201 -6")
+        (Zoom "92")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -319,8 +321,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
-        (Scroll "855 659")
+        (Placement "44 0 1 -1 -1 5 28 5 1515 28 833")
+        (Scroll "550 244")
         (Zoom "210")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
