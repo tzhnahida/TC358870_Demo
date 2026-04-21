@@ -1,0 +1,444 @@
+*speed_ibis_format
+.inc 'CKTDef.sp'
+.inc 'Wmodel.sp'
+.inc 'WireLeadModel.sp'
+.inc 'ViaModel.sp'
+.inc ''
+.Tran 1.000000e-11 1.000000e-08
+
+.option GSHUNT=1e-12 GSHDC=1e-12 
+********Circuits********
+V_PWR_VCC_1V1 IPGPWR_VCC_1V1 gnd! 1.100000e+00
+V_PWR_VCC_1V2 IPGPWR_VCC_1V2 gnd! 1.200000e+00
+V_PWR_VCC_1V8 IPGPWR_VCC_1V8 gnd! 1.800000e+00
+V_PWR_VCC_3V3 IPGPWR_VCC_3V3 gnd! 3.300000e+00
+V_PWR_VCC_5V IPGPWR_VCC_5V gnd! 5.000000e+00
+V_PWR_VCC_5V5 IPGPWR_VCC_5V5 gnd! 5.000000e+00
+X_C80 gnd! Node184!!2::RESETN C80~
+X_CH1 Node2417!!1::MIPI_DSI0_DATA3_N Node3002!!10::MIPI_DSI0_DATA2_P Node1685!!11::MIPI_DSI1_DATA2_P Node1525!!12::MIPI_DSI1_DATA2_N Node2035!!13::MIPI_DSI1_DATA1_P Node1795!!14::MIPI_DSI1_DATA1_N 
++ Node1081!!15::MIPI_DSI1_CLK_P Node973!!16::MIPI_DSI1_CLK_N Node2243!!17::MIPI_DSI1_DATA0_P Node2165!!18::MIPI_DSI1_DATA0_N Node1276!!19::MIPI_DSI1_DATA3_P 
++ Node2947!!2::MIPI_DSI0_DATA3_P Node1207!!20::MIPI_DSI1_DATA3_N gnd! IPGPWR_VCC_5V5 IPGPWR_VCC_1V8 
++ IPGPWR_VCC_1V8 gnd! gnd! gnd! gnd! 
++ Node4066!!29::RESX Node2642!!3::MIPI_DSI0_DATA0_N Node4790!!30 Node4789!!31 Node4007!!32::PWM 
++ gnd! gnd! gnd! IPGPWR_VEE_5V5 gnd! 
++ gnd! Node4774!!39::VCC_LED_AB Node3411!!4::MIPI_DSI0_DATA0_P Node4775!!40::VCC_LED_AB Node2327!!5::MIPI_DSI0_CLK_N 
++ Node2788!!6::MIPI_DSI0_CLK_P Node2495!!7::MIPI_DSI0_DATA1_N Node3030!!8::MIPI_DSI0_DATA1_P Node2474!!9::MIPI_DSI0_DATA2_N Node4788!!P1 
++ Node4787!!P2 Node4786!!P3 Node4785!!P4 CH1~
+X_D5 Node187!!1::RESETN gnd! D5~
+X_ESD1 Node19!!1::HDMI_DATA2_P Node21!!10::HDMI_DATA2_P Node15!!2::HDMI_DATA2_N gnd! Node27!!4::HDMI_DATA1_P Node39!!5::HDMI_DATA1_N 
++ Node41!!6::HDMI_DATA1_N Node29!!7::HDMI_DATA1_P gnd! Node17!!9::HDMI_DATA2_N ESD1~
+X_ESD2 Node23!!1::HDMI_DATA0_P Node25!!10::HDMI_DATA0_P Node31!!2::HDMI_DATA0_N gnd! Node35!!4::HDMI_CLK_P Node43!!5::HDMI_CLK_N 
++ Node45!!6::HDMI_CLK_N Node36!!7::HDMI_CLK_P gnd! Node32!!9::HDMI_DATA0_N ESD2~
+X_HDMI1 Node20!!1::HDMI_DATA2_P Node37!!10::HDMI_CLK_P gnd! Node44!!12::HDMI_CLK_N Node338!!13 Node337!!14 
++ Node288!!15::SCL Node283!!16::SDA gnd! Node9!!18::VCC_HDMIRX_IN Node279!!19::HDP 
++ gnd! Node4274!!20::N271809 Node4275!!21::N271809 Node4276!!22::N271809 Node4281!!23::N271809 
++ Node16!!3::HDMI_DATA2_N Node28!!4::HDMI_DATA1_P gnd! Node40!!6::HDMI_DATA1_N Node24!!7::HDMI_DATA0_P 
++ gnd! Node33!!9::HDMI_DATA0_N HDMI1~
+X_R24 IPGPWR_VCC_1V8 Node186!!2::RESETN R24~
+X_R25 Node4783!!1::N2739972 Node4737!!2::HDP R25~
+X_SW1 gnd! Node185!!2::RESETN SW1~
+X_U8 Node307!!A1::N27399713 gnd! Node319!!A2::N279408 Node290!!A3::SCL Node320!!A4::N2739972 Node66!!A5::MIPI_DSI1_DATA3_P 
++ Node68!!A6::MIPI_DSI1_DATA2_P Node64!!A7::MIPI_DSI1_CLK_P Node101!!A8::MIPI_DSI1_DATA1_P Node103!!A9::MIPI_DSI1_DATA0_P IPGPWR_VCC_3V3 
++ IPGPWR_VCC_1V2 IPGPWR_VCC_1V1 Node282!!B3::SDA Node11!!B4::VCC_HDMIRX_IN Node65!!B5::MIPI_DSI1_DATA3_N 
++ Node67!!B6::MIPI_DSI1_DATA2_N Node63!!B7::MIPI_DSI1_CLK_N Node69!!B8::MIPI_DSI1_DATA1_N Node102!!B9::MIPI_DSI1_DATA0_N Node34!!C1::HDMI_CLK_P 
++ IPGPWR_VCC_1V1 Node42!!C2::HDMI_CLK_N gnd! Node22!!D1::HDMI_DATA0_P Node110!!D10::MIPI_DSI0_DATA3_P 
++ Node30!!D2::HDMI_DATA0_N gnd! gnd! gnd! gnd! 
++ Node105!!D9::MIPI_DSI0_DATA3_N Node26!!E1::HDMI_DATA1_P Node111!!E10::MIPI_DSI0_DATA2_P Node38!!E2::HDMI_DATA1_N gnd! 
++ gnd! gnd! gnd! Node106!!E9::MIPI_DSI0_DATA2_N Node18!!F1::HDMI_DATA2_P 
++ Node109!!F10::MIPI_DSI0_CLK_P Node14!!F2::HDMI_DATA2_N gnd! gnd! gnd! 
++ gnd! Node104!!F9::MIPI_DSI0_CLK_N IPGPWR_VCC_3V3 Node112!!G10::MIPI_DSI0_DATA1_P IPGPWR_VCC_1V1 
++ gnd! gnd! Node341!!G6 gnd! Node107!!G9::MIPI_DSI0_DATA1_N 
++ gnd! Node180!!H10::MIPI_DSI0_DATA0_P IPGPWR_VCC_3V3 Node108!!H9::MIPI_DSI0_DATA0_N Node277!!J1::N284077 
++ IPGPWR_VCC_1V2 Node342!!J2 Node181!!J3::INT Node349!!J4 Node344!!J5 
++ Node345!!J6 IPGPWR_VCC_1V8 Node346!!J8 Node347!!J9 Node275!!K1::N284159 
++ gnd! Node273!!K2::N284174 Node183!!K3::I2C_SDA Node182!!K4::I2C_SCL Node343!!K5 
++ IPGPWR_VCC_1V1 Node348!!K7 Node188!!K8::RESETN Node270!!K9::N284871 U8~
+RHighZ_Node101!!A8::MIPI_DSI1_DATA1_P Node101!!A8::MIPI_DSI1_DATA1_P gnd! 1e12
+RHighZ_Node102!!B9::MIPI_DSI1_DATA0_N Node102!!B9::MIPI_DSI1_DATA0_N gnd! 1e12
+RHighZ_Node103!!A9::MIPI_DSI1_DATA0_P Node103!!A9::MIPI_DSI1_DATA0_P gnd! 1e12
+RHighZ_Node104!!F9::MIPI_DSI0_CLK_N Node104!!F9::MIPI_DSI0_CLK_N gnd! 1e12
+RHighZ_Node105!!D9::MIPI_DSI0_DATA3_N Node105!!D9::MIPI_DSI0_DATA3_N gnd! 1e12
+RHighZ_Node106!!E9::MIPI_DSI0_DATA2_N Node106!!E9::MIPI_DSI0_DATA2_N gnd! 1e12
+RHighZ_Node107!!G9::MIPI_DSI0_DATA1_N Node107!!G9::MIPI_DSI0_DATA1_N gnd! 1e12
+RHighZ_Node108!!H9::MIPI_DSI0_DATA0_N Node108!!H9::MIPI_DSI0_DATA0_N gnd! 1e12
+RHighZ_Node1081!!15::MIPI_DSI1_CLK_P Node1081!!15::MIPI_DSI1_CLK_P gnd! 1e12
+RHighZ_Node109!!F10::MIPI_DSI0_CLK_P Node109!!F10::MIPI_DSI0_CLK_P gnd! 1e12
+RHighZ_Node11!!B4::VCC_HDMIRX_IN Node11!!B4::VCC_HDMIRX_IN gnd! 1e12
+RHighZ_Node110!!D10::MIPI_DSI0_DATA3_P Node110!!D10::MIPI_DSI0_DATA3_P gnd! 1e12
+RHighZ_Node111!!E10::MIPI_DSI0_DATA2_P Node111!!E10::MIPI_DSI0_DATA2_P gnd! 1e12
+RHighZ_Node112!!G10::MIPI_DSI0_DATA1_P Node112!!G10::MIPI_DSI0_DATA1_P gnd! 1e12
+RHighZ_Node1207!!20::MIPI_DSI1_DATA3_N Node1207!!20::MIPI_DSI1_DATA3_N gnd! 1e12
+RHighZ_Node1276!!19::MIPI_DSI1_DATA3_P Node1276!!19::MIPI_DSI1_DATA3_P gnd! 1e12
+RHighZ_Node14!!F2::HDMI_DATA2_N Node14!!F2::HDMI_DATA2_N gnd! 1e12
+RHighZ_Node15!!2::HDMI_DATA2_N Node15!!2::HDMI_DATA2_N gnd! 1e12
+RHighZ_Node1525!!12::MIPI_DSI1_DATA2_N Node1525!!12::MIPI_DSI1_DATA2_N gnd! 1e12
+RHighZ_Node16!!3::HDMI_DATA2_N Node16!!3::HDMI_DATA2_N gnd! 1e12
+RHighZ_Node1685!!11::MIPI_DSI1_DATA2_P Node1685!!11::MIPI_DSI1_DATA2_P gnd! 1e12
+RHighZ_Node17!!9::HDMI_DATA2_N Node17!!9::HDMI_DATA2_N gnd! 1e12
+RHighZ_Node1795!!14::MIPI_DSI1_DATA1_N Node1795!!14::MIPI_DSI1_DATA1_N gnd! 1e12
+RHighZ_Node18!!F1::HDMI_DATA2_P Node18!!F1::HDMI_DATA2_P gnd! 1e12
+RHighZ_Node180!!H10::MIPI_DSI0_DATA0_P Node180!!H10::MIPI_DSI0_DATA0_P gnd! 1e12
+RHighZ_Node181!!J3::INT Node181!!J3::INT gnd! 1e12
+RHighZ_Node182!!K4::I2C_SCL Node182!!K4::I2C_SCL gnd! 1e12
+RHighZ_Node183!!K3::I2C_SDA Node183!!K3::I2C_SDA gnd! 1e12
+RHighZ_Node184!!2::RESETN Node184!!2::RESETN gnd! 1e12
+RHighZ_Node185!!2::RESETN Node185!!2::RESETN gnd! 1e12
+RHighZ_Node186!!2::RESETN Node186!!2::RESETN gnd! 1e12
+RHighZ_Node187!!1::RESETN Node187!!1::RESETN gnd! 1e12
+RHighZ_Node188!!K8::RESETN Node188!!K8::RESETN gnd! 1e12
+RHighZ_Node19!!1::HDMI_DATA2_P Node19!!1::HDMI_DATA2_P gnd! 1e12
+RHighZ_Node20!!1::HDMI_DATA2_P Node20!!1::HDMI_DATA2_P gnd! 1e12
+RHighZ_Node2035!!13::MIPI_DSI1_DATA1_P Node2035!!13::MIPI_DSI1_DATA1_P gnd! 1e12
+RHighZ_Node21!!10::HDMI_DATA2_P Node21!!10::HDMI_DATA2_P gnd! 1e12
+RHighZ_Node2165!!18::MIPI_DSI1_DATA0_N Node2165!!18::MIPI_DSI1_DATA0_N gnd! 1e12
+RHighZ_Node2243!!17::MIPI_DSI1_DATA0_P Node2243!!17::MIPI_DSI1_DATA0_P gnd! 1e12
+RHighZ_Node2327!!5::MIPI_DSI0_CLK_N Node2327!!5::MIPI_DSI0_CLK_N gnd! 1e12
+RHighZ_Node2417!!1::MIPI_DSI0_DATA3_N Node2417!!1::MIPI_DSI0_DATA3_N gnd! 1e12
+RHighZ_Node2474!!9::MIPI_DSI0_DATA2_N Node2474!!9::MIPI_DSI0_DATA2_N gnd! 1e12
+RHighZ_Node2495!!7::MIPI_DSI0_DATA1_N Node2495!!7::MIPI_DSI0_DATA1_N gnd! 1e12
+RHighZ_Node2642!!3::MIPI_DSI0_DATA0_N Node2642!!3::MIPI_DSI0_DATA0_N gnd! 1e12
+RHighZ_Node270!!K9::N284871 Node270!!K9::N284871 gnd! 1e12
+RHighZ_Node273!!K2::N284174 Node273!!K2::N284174 gnd! 1e12
+RHighZ_Node275!!K1::N284159 Node275!!K1::N284159 gnd! 1e12
+RHighZ_Node277!!J1::N284077 Node277!!J1::N284077 gnd! 1e12
+RHighZ_Node2788!!6::MIPI_DSI0_CLK_P Node2788!!6::MIPI_DSI0_CLK_P gnd! 1e12
+RHighZ_Node279!!19::HDP Node279!!19::HDP gnd! 1e12
+RHighZ_Node282!!B3::SDA Node282!!B3::SDA gnd! 1e12
+RHighZ_Node283!!16::SDA Node283!!16::SDA gnd! 1e12
+RHighZ_Node288!!15::SCL Node288!!15::SCL gnd! 1e12
+RHighZ_Node290!!A3::SCL Node290!!A3::SCL gnd! 1e12
+RHighZ_Node2947!!2::MIPI_DSI0_DATA3_P Node2947!!2::MIPI_DSI0_DATA3_P gnd! 1e12
+RHighZ_Node3002!!10::MIPI_DSI0_DATA2_P Node3002!!10::MIPI_DSI0_DATA2_P gnd! 1e12
+RHighZ_Node3030!!8::MIPI_DSI0_DATA1_P Node3030!!8::MIPI_DSI0_DATA1_P gnd! 1e12
+RHighZ_Node307!!A1::N27399713 Node307!!A1::N27399713 gnd! 1e12
+RHighZ_Node319!!A2::N279408 Node319!!A2::N279408 gnd! 1e12
+RHighZ_Node320!!A4::N2739972 Node320!!A4::N2739972 gnd! 1e12
+RHighZ_Node337!!14 Node337!!14 gnd! 1e12
+RHighZ_Node338!!13 Node338!!13 gnd! 1e12
+RHighZ_Node341!!G6 Node341!!G6 gnd! 1e12
+RHighZ_Node3411!!4::MIPI_DSI0_DATA0_P Node3411!!4::MIPI_DSI0_DATA0_P gnd! 1e12
+RHighZ_Node342!!J2 Node342!!J2 gnd! 1e12
+RHighZ_Node343!!K5 Node343!!K5 gnd! 1e12
+RHighZ_Node344!!J5 Node344!!J5 gnd! 1e12
+RHighZ_Node345!!J6 Node345!!J6 gnd! 1e12
+RHighZ_Node346!!J8 Node346!!J8 gnd! 1e12
+RHighZ_Node347!!J9 Node347!!J9 gnd! 1e12
+RHighZ_Node348!!K7 Node348!!K7 gnd! 1e12
+RHighZ_Node349!!J4 Node349!!J4 gnd! 1e12
+RHighZ_Node4007!!32::PWM Node4007!!32::PWM gnd! 1e12
+RHighZ_Node4066!!29::RESX Node4066!!29::RESX gnd! 1e12
+RHighZ_Node4274!!20::N271809 Node4274!!20::N271809 gnd! 1e12
+RHighZ_Node4275!!21::N271809 Node4275!!21::N271809 gnd! 1e12
+RHighZ_Node4276!!22::N271809 Node4276!!22::N271809 gnd! 1e12
+RHighZ_Node4281!!23::N271809 Node4281!!23::N271809 gnd! 1e12
+RHighZ_Node4737!!2::HDP Node4737!!2::HDP gnd! 1e12
+RHighZ_Node4774!!39::VCC_LED_AB Node4774!!39::VCC_LED_AB gnd! 1e12
+RHighZ_Node4775!!40::VCC_LED_AB Node4775!!40::VCC_LED_AB gnd! 1e12
+RHighZ_Node4783!!1::N2739972 Node4783!!1::N2739972 gnd! 1e12
+RHighZ_Node4785!!P4 Node4785!!P4 gnd! 1e12
+RHighZ_Node4786!!P3 Node4786!!P3 gnd! 1e12
+RHighZ_Node4787!!P2 Node4787!!P2 gnd! 1e12
+RHighZ_Node4788!!P1 Node4788!!P1 gnd! 1e12
+RHighZ_Node4789!!31 Node4789!!31 gnd! 1e12
+RHighZ_Node4790!!30 Node4790!!30 gnd! 1e12
+RHighZ_Node63!!B7::MIPI_DSI1_CLK_N Node63!!B7::MIPI_DSI1_CLK_N gnd! 1e12
+RHighZ_Node64!!A7::MIPI_DSI1_CLK_P Node64!!A7::MIPI_DSI1_CLK_P gnd! 1e12
+RHighZ_Node65!!B5::MIPI_DSI1_DATA3_N Node65!!B5::MIPI_DSI1_DATA3_N gnd! 1e12
+RHighZ_Node66!!A5::MIPI_DSI1_DATA3_P Node66!!A5::MIPI_DSI1_DATA3_P gnd! 1e12
+RHighZ_Node67!!B6::MIPI_DSI1_DATA2_N Node67!!B6::MIPI_DSI1_DATA2_N gnd! 1e12
+RHighZ_Node68!!A6::MIPI_DSI1_DATA2_P Node68!!A6::MIPI_DSI1_DATA2_P gnd! 1e12
+RHighZ_Node69!!B8::MIPI_DSI1_DATA1_N Node69!!B8::MIPI_DSI1_DATA1_N gnd! 1e12
+RHighZ_Node9!!18::VCC_HDMIRX_IN Node9!!18::VCC_HDMIRX_IN gnd! 1e12
+RHighZ_Node973!!16::MIPI_DSI1_CLK_N Node973!!16::MIPI_DSI1_CLK_N gnd! 1e12
+********#Traces#*******
+W_Trace118::HDMI_DATA0_P Node22!!D1::HDMI_DATA0_P gnd! Node22!!D1_Auto_48::HDMI_DATA0_P gnd!
++ N=1 L=1.410000e-05 RLGCModel=Wmodel_Trace118::HDMI_DATA0_P FGD=5.000000e+09
+W_Trace264::HDMI_DATA0_N Node605::HDMI_DATA0_N gnd! Node605_Auto_5::HDMI_DATA0_N gnd!
++ N=1 L=1.464088e-05 RLGCModel=Wmodel_Trace264::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace168_Auto_52::HDMI_DATA1_P Node512_Auto_52::HDMI_DATA1_P gnd! Node513::HDMI_DATA1_P gnd!
++ N=1 L=2.450000e-05 RLGCModel=Wmodel_Trace168_Auto_52::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace353_Auto_51::HDMI_DATA1_N Node687_Auto_51::HDMI_DATA1_N gnd! Node689::HDMI_DATA1_N gnd!
++ N=1 L=2.450000e-05 RLGCModel=Wmodel_Trace353_Auto_51::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace446::HDMI_CLK_N Node776::HDMI_CLK_N gnd! Node776_Auto_123::HDMI_CLK_N gnd!
++ N=1 L=3.559643e-05 RLGCModel=Wmodel_Trace446::HDMI_CLK_N FGD=5.000000e+09
+W_Trace323::HDMI_CLK_P Node662::HDMI_CLK_P gnd! Node619::HDMI_CLK_P gnd!
++ N=1 L=3.436149e-03 RLGCModel=Wmodel_Trace323::HDMI_CLK_P FGD=5.000000e+09
+W_Trace263::HDMI_DATA0_N Node605::HDMI_DATA0_N gnd! Node603::HDMI_DATA0_N gnd!
++ N=1 L=9.096367e-05 RLGCModel=Wmodel_Trace263::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace357::HDMI_DATA1_N Node691::HDMI_DATA1_N gnd! Node691_Auto_14::HDMI_DATA1_N gnd!
++ N=1 L=4.177824e-05 RLGCModel=Wmodel_Trace357::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace446_Auto_124::HDMI_CLK_N Node776_Auto_124::HDMI_CLK_N gnd! Node779::HDMI_CLK_N gnd!
++ N=1 L=5.120595e-05 RLGCModel=Wmodel_Trace446_Auto_124::HDMI_CLK_N FGD=5.000000e+09
+W_Trace449::HDMI_CLK_N Node780::HDMI_CLK_N gnd! Node780_Auto_125::HDMI_CLK_N gnd!
++ N=1 L=5.134072e-05 RLGCModel=Wmodel_Trace449::HDMI_CLK_N FGD=5.000000e+09
+W_Trace221::HDMI_DATA1_P Node564::HDMI_DATA1_P gnd! Node564_Auto_32::HDMI_DATA1_P gnd!
++ N=1 L=5.135601e-05 RLGCModel=Wmodel_Trace221::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace221_Auto_33::HDMI_DATA1_P Node564_Auto_33::HDMI_DATA1_P gnd! Node566::HDMI_DATA1_P gnd!
++ N=1 L=5.750000e-05 RLGCModel=Wmodel_Trace221_Auto_33::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace327::HDMI_CLK_P Node665::HDMI_CLK_P gnd! Node666::HDMI_CLK_P gnd!
++ N=1 L=6.654720e-05 RLGCModel=Wmodel_Trace327::HDMI_CLK_P FGD=5.000000e+09
+W_Trace377::HDMI_DATA1_N Node713::HDMI_DATA1_N gnd! Node694::HDMI_DATA1_N gnd!
++ N=1 L=1.197431e-03 RLGCModel=Wmodel_Trace377::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace172_Auto_16::HDMI_DATA1_P Node515_Auto_16::HDMI_DATA1_P gnd! Node517::HDMI_DATA1_P gnd!
++ N=1 L=6.814995e-05 RLGCModel=Wmodel_Trace172_Auto_16::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace215::HDMI_DATA1_P Node560::HDMI_DATA1_P gnd! Node517::HDMI_DATA1_P gnd!
++ N=1 L=3.031337e-03 RLGCModel=Wmodel_Trace215::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace170::HDMI_DATA1_P Node515::HDMI_DATA1_P gnd! Node513::HDMI_DATA1_P gnd!
++ N=1 L=1.830865e-04 RLGCModel=Wmodel_Trace170::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace381::HDMI_DATA1_N Node717::HDMI_DATA1_N gnd! Node715::HDMI_DATA1_N gnd!
++ N=1 L=1.830723e-04 RLGCModel=Wmodel_Trace381::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace147_Auto_4::HDMI_DATA0_P Node493_Auto_4::HDMI_DATA0_P gnd! Node495::HDMI_DATA0_P gnd!
++ N=1 L=1.257236e-04 RLGCModel=Wmodel_Trace147_Auto_4::HDMI_DATA0_P FGD=5.000000e+09
+W_Trace329_Auto_126::HDMI_CLK_P Node666_Auto_126::HDMI_CLK_P gnd! Node668::HDMI_CLK_P gnd!
++ N=1 L=1.353932e-04 RLGCModel=Wmodel_Trace329_Auto_126::HDMI_CLK_P FGD=5.000000e+09
+W_Trace238_Auto_38::HDMI_DATA0_N Node578_Auto_38::HDMI_DATA0_N gnd! Node580::HDMI_DATA0_N gnd!
++ N=1 L=1.355000e-04 RLGCModel=Wmodel_Trace238_Auto_38::HDMI_DATA0_N FGD=5.000000e+09
+WCPL_Trace443::HDMI_CLK_N Node775::HDMI_CLK_N Node662_Auto_121::HDMI_CLK_P gnd! 
++ Node776::HDMI_CLK_N Node662_Auto_122::HDMI_CLK_P gnd!
++ N=2 L=1.597211e-04 RLGCModel=Wmodel_Trace443::HDMI_CLK_N FGD=5.000000e+09
+W_Trace236::HDMI_DATA0_N Node578::HDMI_DATA0_N gnd! Node30!!D2::HDMI_DATA0_N gnd!
++ N=1 L=5.744711e-04 RLGCModel=Wmodel_Trace236::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace447::HDMI_CLK_N Node779::HDMI_CLK_N gnd! Node780::HDMI_CLK_N gnd!
++ N=1 L=1.689176e-04 RLGCModel=Wmodel_Trace447::HDMI_CLK_N FGD=5.000000e+09
+W_Trace404::HDMI_CLK_N Node737::HDMI_CLK_N gnd! Node42!!C2::HDMI_CLK_N gnd!
++ N=1 L=5.866699e-04 RLGCModel=Wmodel_Trace404::HDMI_CLK_N FGD=5.000000e+09
+W_Trace351::HDMI_DATA1_N Node687::HDMI_DATA1_N gnd! Node38!!E2::HDMI_DATA1_N gnd!
++ N=1 L=5.994656e-04 RLGCModel=Wmodel_Trace351::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace261_Auto_3::HDMI_DATA0_N Node601_Auto_3::HDMI_DATA0_N Node493::HDMI_DATA0_P gnd! 
++ Node603::HDMI_DATA0_N Node493_Auto_4::HDMI_DATA0_P gnd!
++ N=2 L=1.754694e-04 RLGCModel=Wmodel_Trace261_Auto_3::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace330::HDMI_CLK_P Node668::HDMI_CLK_P gnd! Node676::HDMI_CLK_P gnd!
++ N=1 L=5.298998e-04 RLGCModel=Wmodel_Trace330::HDMI_CLK_P FGD=5.000000e+09
+W_Trace353_Auto_44::HDMI_DATA1_N Node687::HDMI_DATA1_N gnd! Node687_Auto_46::HDMI_DATA1_N gnd!
++ N=1 L=1.806672e-04 RLGCModel=Wmodel_Trace353_Auto_44::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace406::HDMI_CLK_N Node737::HDMI_CLK_N gnd! Node737_Auto_39::HDMI_CLK_N gnd!
++ N=1 L=1.838571e-04 RLGCModel=Wmodel_Trace406::HDMI_CLK_N FGD=5.000000e+09
+WCPL_Trace446_Auto_123::HDMI_CLK_N Node776_Auto_123::HDMI_CLK_N Node662_Auto_122::HDMI_CLK_P gnd! 
++ Node776_Auto_124::HDMI_CLK_N Node665::HDMI_CLK_P gnd!
++ N=2 L=1.852290e-04 RLGCModel=Wmodel_Trace446_Auto_123::HDMI_CLK_N FGD=5.000000e+09
+W_Trace239::HDMI_DATA0_N Node580::HDMI_DATA0_N gnd! Node601::HDMI_DATA0_N gnd!
++ N=1 L=1.719644e-03 RLGCModel=Wmodel_Trace239::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace119::HDMI_DATA0_P Node466::HDMI_DATA0_P gnd! Node493::HDMI_DATA0_P gnd!
++ N=1 L=2.977107e-03 RLGCModel=Wmodel_Trace119::HDMI_DATA0_P FGD=5.000000e+09
+W_Trace238::HDMI_DATA0_N Node578::HDMI_DATA0_N gnd! Node578_Auto_41::HDMI_DATA0_N gnd!
++ N=1 L=1.937550e-04 RLGCModel=Wmodel_Trace238::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace219::HDMI_DATA1_P Node563::HDMI_DATA1_P gnd! Node564::HDMI_DATA1_P gnd!
++ N=1 L=1.938849e-04 RLGCModel=Wmodel_Trace219::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace217_Auto_31::HDMI_DATA1_P Node560_Auto_31::HDMI_DATA1_P gnd! Node563::HDMI_DATA1_P gnd!
++ N=1 L=1.939423e-04 RLGCModel=Wmodel_Trace217_Auto_31::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace355::HDMI_DATA1_N Node690::HDMI_DATA1_N gnd! Node691::HDMI_DATA1_N gnd!
++ N=1 L=1.939625e-04 RLGCModel=Wmodel_Trace355::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace238_Auto_36::HDMI_DATA0_N Node578_Auto_49::HDMI_DATA0_N Node22!!D1_Auto_50::HDMI_DATA0_P Node689::HDMI_DATA1_N gnd! 
++ Node578_Auto_37::HDMI_DATA0_N Node22!!D1_Auto_35::HDMI_DATA0_P Node690::HDMI_DATA1_N gnd!
++ N=3 L=1.938823e-04 RLGCModel=Wmodel_Trace238_Auto_36::HDMI_DATA0_N FGD=5.000000e+09
+WCPL_Trace357_Auto_15::HDMI_DATA1_N Node691_Auto_14::HDMI_DATA1_N Node515::HDMI_DATA1_P gnd! 
++ Node694::HDMI_DATA1_N Node515_Auto_16::HDMI_DATA1_P gnd!
++ N=2 L=2.554169e-04 RLGCModel=Wmodel_Trace357_Auto_15::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace148::HDMI_DATA0_P Node495::HDMI_DATA0_P gnd! Node495_Auto_6::HDMI_DATA0_P gnd!
++ N=1 L=2.570000e-04 RLGCModel=Wmodel_Trace148::HDMI_DATA0_P FGD=5.000000e+09
+WCPL_Trace379_Auto_30::HDMI_DATA1_N Node713_Auto_30::HDMI_DATA1_N Node560::HDMI_DATA1_P gnd! 
++ Node715::HDMI_DATA1_N Node560_Auto_31::HDMI_DATA1_P gnd!
++ N=2 L=3.350567e-04 RLGCModel=Wmodel_Trace379_Auto_30::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace264_Auto_5::HDMI_DATA0_N Node605_Auto_5::HDMI_DATA0_N Node495_Auto_6::HDMI_DATA0_P gnd! 
++ Node606::HDMI_DATA0_N Node497::HDMI_DATA0_P gnd!
++ N=2 L=3.379591e-04 RLGCModel=Wmodel_Trace264_Auto_5::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace440::HDMI_CLK_N Node775::HDMI_CLK_N gnd! Node740::HDMI_CLK_N gnd!
++ N=1 L=4.347737e-03 RLGCModel=Wmodel_Trace440::HDMI_CLK_N FGD=5.000000e+09
+W_Trace391::HDMI_DATA1_N Node39!!5::HDMI_DATA1_N gnd! Node719::HDMI_DATA1_N gnd!
++ N=1 L=7.289250e-04 RLGCModel=Wmodel_Trace391::HDMI_DATA1_N FGD=5.000000e+09
+W_Trace268::HDMI_DATA0_N Node31!!2::HDMI_DATA0_N gnd! Node606::HDMI_DATA0_N gnd!
++ N=1 L=7.542183e-04 RLGCModel=Wmodel_Trace268::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace223::HDMI_DATA1_P Node27!!4::HDMI_DATA1_P gnd! Node566::HDMI_DATA1_P gnd!
++ N=1 L=6.762723e-04 RLGCModel=Wmodel_Trace223::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace156::HDMI_DATA0_P Node23!!1::HDMI_DATA0_P gnd! Node497::HDMI_DATA0_P gnd!
++ N=1 L=7.816963e-04 RLGCModel=Wmodel_Trace156::HDMI_DATA0_P FGD=5.000000e+09
+WCPL_Trace449_Auto_125::HDMI_CLK_N Node780_Auto_125::HDMI_CLK_N Node666::HDMI_CLK_P gnd! 
++ Node782::HDMI_CLK_N Node666_Auto_126::HDMI_CLK_P gnd!
++ N=2 L=6.191163e-04 RLGCModel=Wmodel_Trace449_Auto_125::HDMI_CLK_N FGD=5.000000e+09
+W_Trace325::HDMI_CLK_P Node662::HDMI_CLK_P gnd! Node662_Auto_121::HDMI_CLK_P gnd!
++ N=1 L=6.815507e-04 RLGCModel=Wmodel_Trace325::HDMI_CLK_P FGD=5.000000e+09
+W_Trace261::HDMI_DATA0_N Node601::HDMI_DATA0_N gnd! Node601_Auto_3::HDMI_DATA0_N gnd!
++ N=1 L=7.880172e-04 RLGCModel=Wmodel_Trace261::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace450::HDMI_CLK_N Node782::HDMI_CLK_N gnd! Node43!!5::HDMI_CLK_N gnd!
++ N=1 L=8.012000e-04 RLGCModel=Wmodel_Trace450::HDMI_CLK_N FGD=5.000000e+09
+WCPL_Trace280_Auto_40::HDMI_CLK_P Node618_Auto_40::HDMI_CLK_P Node578_Auto_42::HDMI_DATA0_N Node22!!D1_Auto_43::HDMI_DATA0_P Node687_Auto_45::HDMI_DATA1_N Node512_Auto_47::HDMI_DATA1_P gnd! 
++ Node619::HDMI_CLK_P Node578_Auto_49::HDMI_DATA0_N Node22!!D1_Auto_50::HDMI_DATA0_P Node687_Auto_51::HDMI_DATA1_N Node512_Auto_52::HDMI_DATA1_P gnd!
++ N=5 L=9.436828e-04 RLGCModel=Wmodel_Trace280_Auto_40::HDMI_CLK_P FGD=5.000000e+09
+W_Trace379::HDMI_DATA1_N Node713::HDMI_DATA1_N gnd! Node713_Auto_30::HDMI_DATA1_N gnd!
++ N=1 L=1.189643e-03 RLGCModel=Wmodel_Trace379::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace383::HDMI_DATA1_N Node717::HDMI_DATA1_N Node564_Auto_32::HDMI_DATA1_P gnd! 
++ Node719::HDMI_DATA1_N Node564_Auto_33::HDMI_DATA1_P gnd!
++ N=2 L=1.271441e-03 RLGCModel=Wmodel_Trace383::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace238_Auto_37::HDMI_DATA0_N Node578_Auto_37::HDMI_DATA0_N Node22!!D1_Auto_35::HDMI_DATA0_P gnd! 
++ Node578_Auto_38::HDMI_DATA0_N Node466::HDMI_DATA0_P gnd!
++ N=2 L=1.405235e-03 RLGCModel=Wmodel_Trace238_Auto_37::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace166::HDMI_DATA1_P Node28!!4::HDMI_DATA1_P gnd! Node505::HDMI_DATA1_P gnd!
++ N=1 L=2.224922e-03 RLGCModel=Wmodel_Trace166::HDMI_DATA1_P FGD=5.000000e+09
+W_Trace117::HDMI_DATA0_P Node24!!7::HDMI_DATA0_P gnd! Node458::HDMI_DATA0_P gnd!
++ N=1 L=2.354767e-03 RLGCModel=Wmodel_Trace117::HDMI_DATA0_P FGD=5.000000e+09
+W_Trace278::HDMI_CLK_P Node37!!10::HDMI_CLK_P gnd! Node611::HDMI_CLK_P gnd!
++ N=1 L=2.268271e-03 RLGCModel=Wmodel_Trace278::HDMI_CLK_P FGD=5.000000e+09
+W_Trace401::HDMI_CLK_N Node44!!12::HDMI_CLK_N gnd! Node727::HDMI_CLK_N gnd!
++ N=1 L=2.305380e-03 RLGCModel=Wmodel_Trace401::HDMI_CLK_N FGD=5.000000e+09
+W_Trace233::HDMI_DATA0_N Node33!!9::HDMI_DATA0_N gnd! Node568::HDMI_DATA0_N gnd!
++ N=1 L=2.304845e-03 RLGCModel=Wmodel_Trace233::HDMI_DATA0_N FGD=5.000000e+09
+W_Trace348::HDMI_DATA1_N Node40!!6::HDMI_DATA1_N gnd! Node677::HDMI_DATA1_N gnd!
++ N=1 L=2.286828e-03 RLGCModel=Wmodel_Trace348::HDMI_DATA1_N FGD=5.000000e+09
+WCPL_Trace406_Auto_39::HDMI_CLK_N Node737_Auto_39::HDMI_CLK_N Node618::HDMI_CLK_P Node578_Auto_41::HDMI_DATA0_N Node22!!D1_Auto_48::HDMI_DATA0_P Node687_Auto_46::HDMI_DATA1_N
++ Node512::HDMI_DATA1_P gnd! 
++ Node740::HDMI_CLK_N Node618_Auto_40::HDMI_CLK_P Node578_Auto_42::HDMI_DATA0_N Node22!!D1_Auto_43::HDMI_DATA0_P Node687_Auto_45::HDMI_DATA1_N
++ Node512_Auto_47::HDMI_DATA1_P gnd!
++ N=6 L=2.459617e-03 RLGCModel=Wmodel_Trace406_Auto_39::HDMI_CLK_N FGD=5.000000e+09
+********#End Traces#*******
+********Wires********
+********Leads********
+********#Vias#********
+********#End Vias#********
+**********#Pad CAP#**********
+C_FILLETpad~polygon0345::hdmi_data1_p FILLETpad~polygon0345::hdmi_data1_p gnd! 3.10969485e-14
+C_FILLETpad~polygon0347::hdmi_clk_p FILLETpad~polygon0347::hdmi_clk_p gnd! 3.08526134e-14
+C_FILLETpad~polygon0369::hdmi_data1_p FILLETpad~polygon0369::hdmi_data1_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0370::hdmi_clk_p FILLETpad~polygon0370::hdmi_clk_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0371::hdmi_data1_p FILLETpad~polygon0371::hdmi_data1_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0372::hdmi_data0_n FILLETpad~polygon0372::hdmi_data0_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0373::hdmi_clk_p FILLETpad~polygon0373::hdmi_clk_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0374::hdmi_data0_n FILLETpad~polygon0374::hdmi_data0_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0376::hdmi_data1_p FILLETpad~polygon0376::hdmi_data1_p gnd! 2.78695603e-14
+C_FILLETpad~polygon0377::hdmi_data0_n FILLETpad~polygon0377::hdmi_data0_n gnd! 2.78695603e-14
+C_FILLETpad~polygon0378::hdmi_clk_p FILLETpad~polygon0378::hdmi_clk_p gnd! 2.78695603e-14
+C_FILLETpad~polygon0379::hdmi_data0_p FILLETpad~polygon0379::hdmi_data0_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0380::hdmi_data0_p FILLETpad~polygon0380::hdmi_data0_p gnd! 2.78720838e-14
+C_FILLETpad~polygon0381::hdmi_data0_p FILLETpad~polygon0381::hdmi_data0_p gnd! 2.78695603e-14
+C_FILLETpad~polygon0384::hdmi_clk_n FILLETpad~polygon0384::hdmi_clk_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0385::hdmi_data1_n FILLETpad~polygon0385::hdmi_data1_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0386::hdmi_clk_n FILLETpad~polygon0386::hdmi_clk_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0387::hdmi_data1_n FILLETpad~polygon0387::hdmi_data1_n gnd! 2.78720838e-14
+C_FILLETpad~polygon0388::hdmi_clk_n FILLETpad~polygon0388::hdmi_clk_n gnd! 2.78695603e-14
+C_FILLETpad~polygon0390::hdmi_data1_n FILLETpad~polygon0390::hdmi_data1_n gnd! 2.78695603e-14
+C_FILLETpad~polygon0393::hdmi_data1_n FILLETpad~polygon0393::hdmi_data1_n gnd! 2.75006314e-14
+C_FILLETpad~polygon0394::hdmi_data0_n FILLETpad~polygon0394::hdmi_data0_n gnd! 2.67828735e-14
+C_FILLETpad~polygon0395::hdmi_clk_n FILLETpad~polygon0395::hdmi_clk_n gnd! 2.67613299e-14
+C_FILLETpad~polygon0404::hdmi_data0_p FILLETpad~polygon0404::hdmi_data0_p gnd! 2.02426693e-14
+C_FILLETpad~polygon0408::hdmi_data1_p FILLETpad~polygon0408::hdmi_data1_p gnd! 1.08009618e-14
+C_FILLETpad~polygon0409::hdmi_clk_p FILLETpad~polygon0409::hdmi_clk_p gnd! 1.00601988e-14
+C_FILLETpad~polygon0411::hdmi_data0_p FILLETpad~polygon0411::hdmi_data0_p gnd! 9.33985774e-15
+C_FILLETpad~polygon0415::hdmi_data0_n FILLETpad~polygon0415::hdmi_data0_n gnd! 9.28979944e-15
+C_FILLETpad~polygon0416::hdmi_data1_n FILLETpad~polygon0416::hdmi_data1_n gnd! 9.28979944e-15
+C_FILLETpad~polygon0417::hdmi_clk_n FILLETpad~polygon0417::hdmi_clk_n gnd! 9.28979944e-15
+C_Node22!!D1::HDMI_DATA0_P Node22!!D1::HDMI_DATA0_P gnd! 1.38814872e-14
+C_Node23!!1::HDMI_DATA0_P Node23!!1::HDMI_DATA0_P gnd! 4.68417769e-14
+C_Node24!!7::HDMI_DATA0_P Node24!!7::HDMI_DATA0_P gnd! 1.99907231e-13
+C_Node25!!10::HDMI_DATA0_P Node25!!10::HDMI_DATA0_P gnd! 6.22889908e-14
+C_Node26!!E1::HDMI_DATA1_P Node26!!E1::HDMI_DATA1_P gnd! 2.06811828e-14
+C_Node27!!4::HDMI_DATA1_P Node27!!4::HDMI_DATA1_P gnd! 4.68417769e-14
+C_Node28!!4::HDMI_DATA1_P Node28!!4::HDMI_DATA1_P gnd! 1.99907181e-13
+C_Node29!!7::HDMI_DATA1_P Node29!!7::HDMI_DATA1_P gnd! 6.22889908e-14
+C_Node30!!D2::HDMI_DATA0_N Node30!!D2::HDMI_DATA0_N gnd! 1.38814872e-14
+C_Node31!!2::HDMI_DATA0_N Node31!!2::HDMI_DATA0_N gnd! 4.68417769e-14
+C_Node32!!9::HDMI_DATA0_N Node32!!9::HDMI_DATA0_N gnd! 6.22889908e-14
+C_Node33!!9::HDMI_DATA0_N Node33!!9::HDMI_DATA0_N gnd! 1.99907340e-13
+C_Node34!!C1::HDMI_CLK_P Node34!!C1::HDMI_CLK_P gnd! 2.06811828e-14
+C_Node35!!4::HDMI_CLK_P Node35!!4::HDMI_CLK_P gnd! 6.22889908e-14
+C_Node36!!7::HDMI_CLK_P Node36!!7::HDMI_CLK_P gnd! 6.22889908e-14
+C_Node37!!10::HDMI_CLK_P Node37!!10::HDMI_CLK_P gnd! 1.99907246e-13
+C_Node38!!E2::HDMI_DATA1_N Node38!!E2::HDMI_DATA1_N gnd! 1.38814872e-14
+C_Node39!!5::HDMI_DATA1_N Node39!!5::HDMI_DATA1_N gnd! 4.68417769e-14
+C_Node40!!6::HDMI_DATA1_N Node40!!6::HDMI_DATA1_N gnd! 1.99907364e-13
+C_Node41!!6::HDMI_DATA1_N Node41!!6::HDMI_DATA1_N gnd! 6.22889908e-14
+C_Node42!!C2::HDMI_CLK_N Node42!!C2::HDMI_CLK_N gnd! 1.38814872e-14
+C_Node43!!5::HDMI_CLK_N Node43!!5::HDMI_CLK_N gnd! 4.68417769e-14
+C_Node44!!12::HDMI_CLK_N Node44!!12::HDMI_CLK_N gnd! 1.99907332e-13
+C_Node45!!6::HDMI_CLK_N Node45!!6::HDMI_CLK_N gnd! 6.22889908e-14
+**********#End Pad CAP#**********
+********#Node Connection#********
+.connect FILLETpad~polygon0345::hdmi_data1_p FILLETpad~polygon0369::hdmi_data1_p
+.connect FILLETpad~polygon0345::hdmi_data1_p FILLETpad~polygon0371::hdmi_data1_p
+.connect FILLETpad~polygon0345::hdmi_data1_p FILLETpad~polygon0376::hdmi_data1_p
+.connect FILLETpad~polygon0345::hdmi_data1_p Node27!!4::HDMI_DATA1_P
+.connect FILLETpad~polygon0345::hdmi_data1_p Node29!!7::HDMI_DATA1_P
+.connect FILLETpad~polygon0345::hdmi_data1_p Node504::HDMI_DATA1_P
+.connect FILLETpad~polygon0345::hdmi_data1_p Node505::HDMI_DATA1_P
+.connect FILLETpad~polygon0385::hdmi_data1_n FILLETpad~polygon0387::hdmi_data1_n
+.connect FILLETpad~polygon0385::hdmi_data1_n FILLETpad~polygon0390::hdmi_data1_n
+.connect FILLETpad~polygon0385::hdmi_data1_n FILLETpad~polygon0393::hdmi_data1_n
+.connect FILLETpad~polygon0385::hdmi_data1_n Node39!!5::HDMI_DATA1_N
+.connect FILLETpad~polygon0385::hdmi_data1_n Node41!!6::HDMI_DATA1_N
+.connect FILLETpad~polygon0385::hdmi_data1_n Node677::HDMI_DATA1_N
+.connect FILLETpad~polygon0379::hdmi_data0_p FILLETpad~polygon0380::hdmi_data0_p
+.connect FILLETpad~polygon0379::hdmi_data0_p FILLETpad~polygon0381::hdmi_data0_p
+.connect FILLETpad~polygon0379::hdmi_data0_p FILLETpad~polygon0404::hdmi_data0_p
+.connect FILLETpad~polygon0379::hdmi_data0_p Node23!!1::HDMI_DATA0_P
+.connect FILLETpad~polygon0379::hdmi_data0_p Node25!!10::HDMI_DATA0_P
+.connect FILLETpad~polygon0379::hdmi_data0_p Node458::HDMI_DATA0_P
+.connect FILLETpad~polygon0372::hdmi_data0_n FILLETpad~polygon0374::hdmi_data0_n
+.connect FILLETpad~polygon0372::hdmi_data0_n FILLETpad~polygon0377::hdmi_data0_n
+.connect FILLETpad~polygon0372::hdmi_data0_n FILLETpad~polygon0394::hdmi_data0_n
+.connect FILLETpad~polygon0372::hdmi_data0_n Node31!!2::HDMI_DATA0_N
+.connect FILLETpad~polygon0372::hdmi_data0_n Node32!!9::HDMI_DATA0_N
+.connect FILLETpad~polygon0372::hdmi_data0_n Node568::HDMI_DATA0_N
+.connect FILLETpad~polygon0347::hdmi_clk_p FILLETpad~polygon0370::hdmi_clk_p
+.connect FILLETpad~polygon0347::hdmi_clk_p FILLETpad~polygon0373::hdmi_clk_p
+.connect FILLETpad~polygon0347::hdmi_clk_p FILLETpad~polygon0378::hdmi_clk_p
+.connect FILLETpad~polygon0347::hdmi_clk_p Node35!!4::HDMI_CLK_P
+.connect FILLETpad~polygon0347::hdmi_clk_p Node36!!7::HDMI_CLK_P
+.connect FILLETpad~polygon0347::hdmi_clk_p Node610::HDMI_CLK_P
+.connect FILLETpad~polygon0347::hdmi_clk_p Node611::HDMI_CLK_P
+.connect FILLETpad~polygon0347::hdmi_clk_p Node676::HDMI_CLK_P
+.connect FILLETpad~polygon0384::hdmi_clk_n FILLETpad~polygon0386::hdmi_clk_n
+.connect FILLETpad~polygon0384::hdmi_clk_n FILLETpad~polygon0388::hdmi_clk_n
+.connect FILLETpad~polygon0384::hdmi_clk_n FILLETpad~polygon0395::hdmi_clk_n
+.connect FILLETpad~polygon0384::hdmi_clk_n Node43!!5::HDMI_CLK_N
+.connect FILLETpad~polygon0384::hdmi_clk_n Node45!!6::HDMI_CLK_N
+.connect FILLETpad~polygon0384::hdmi_clk_n Node727::HDMI_CLK_N
+.connect FILLETpad~polygon0411::hdmi_data0_p Node22!!D1::HDMI_DATA0_P
+.connect FILLETpad~polygon0408::hdmi_data1_p Node26!!E1::HDMI_DATA1_P
+.connect FILLETpad~polygon0408::hdmi_data1_p Node512::HDMI_DATA1_P
+.connect FILLETpad~polygon0409::hdmi_clk_p Node34!!C1::HDMI_CLK_P
+.connect FILLETpad~polygon0409::hdmi_clk_p Node618::HDMI_CLK_P
+.connect FILLETpad~polygon0415::hdmi_data0_n Node30!!D2::HDMI_DATA0_N
+.connect FILLETpad~polygon0416::hdmi_data1_n Node38!!E2::HDMI_DATA1_N
+.connect FILLETpad~polygon0417::hdmi_clk_n Node42!!C2::HDMI_CLK_N
+********#End Node Connection#********
+.ProbeMapping
+X_ESD1.Xpartial.4 0 ESD1.4::HDMI_DATA1_P GND HDMI_DATA1_P
+X_ESD1.Xpartial.5 0 ESD1.5::HDMI_DATA1_N GND HDMI_DATA1_N
+X_ESD1.Xpartial.6 0 ESD1.6::HDMI_DATA1_N GND HDMI_DATA1_N
+X_ESD1.Xpartial.7 0 ESD1.7::HDMI_DATA1_P GND HDMI_DATA1_P
+X_ESD1.Xpartial.4 X_ESD1.Xpartial.5 ESD1.4::HDMI_DATA1_P ESD1.5::HDMI_DATA1_N HDMI_DATA1_P||HDMI_DATA1_N
+X_ESD1.Xpartial.7 X_ESD1.Xpartial.5 ESD1.7::HDMI_DATA1_P ESD1.5::HDMI_DATA1_N HDMI_DATA1_P||HDMI_DATA1_N
+X_ESD2.Xpartial.1 0 ESD2.1::HDMI_DATA0_P GND HDMI_DATA0_P
+X_ESD2.Xpartial.10 0 ESD2.10::HDMI_DATA0_P GND HDMI_DATA0_P
+X_ESD2.Xpartial.2 0 ESD2.2::HDMI_DATA0_N GND HDMI_DATA0_N
+X_ESD2.Xpartial.4 0 ESD2.4::HDMI_CLK_P GND HDMI_CLK_P
+X_ESD2.Xpartial.5 0 ESD2.5::HDMI_CLK_N GND HDMI_CLK_N
+X_ESD2.Xpartial.6 0 ESD2.6::HDMI_CLK_N GND HDMI_CLK_N
+X_ESD2.Xpartial.7 0 ESD2.7::HDMI_CLK_P GND HDMI_CLK_P
+X_ESD2.Xpartial.9 0 ESD2.9::HDMI_DATA0_N GND HDMI_DATA0_N
+X_ESD2.Xpartial.1 X_ESD2.Xpartial.2 ESD2.1::HDMI_DATA0_P ESD2.2::HDMI_DATA0_N HDMI_DATA0_P||HDMI_DATA0_N
+X_ESD2.Xpartial.10 X_ESD2.Xpartial.2 ESD2.10::HDMI_DATA0_P ESD2.2::HDMI_DATA0_N HDMI_DATA0_P||HDMI_DATA0_N
+X_ESD2.Xpartial.4 X_ESD2.Xpartial.6 ESD2.4::HDMI_CLK_P ESD2.6::HDMI_CLK_N HDMI_CLK_P||HDMI_CLK_N
+X_ESD2.Xpartial.7 X_ESD2.Xpartial.5 ESD2.7::HDMI_CLK_P ESD2.5::HDMI_CLK_N HDMI_CLK_P||HDMI_CLK_N
+X_HDMI1.Xpartial.10 0 HDMI1.10::HDMI_CLK_P GND HDMI_CLK_P
+X_HDMI1.Xpartial.12 0 HDMI1.12::HDMI_CLK_N GND HDMI_CLK_N
+X_HDMI1.Xpartial.4 0 HDMI1.4::HDMI_DATA1_P GND HDMI_DATA1_P
+X_HDMI1.Xpartial.6 0 HDMI1.6::HDMI_DATA1_N GND HDMI_DATA1_N
+X_HDMI1.Xpartial.7 0 HDMI1.7::HDMI_DATA0_P GND HDMI_DATA0_P
+X_HDMI1.Xpartial.9 0 HDMI1.9::HDMI_DATA0_N GND HDMI_DATA0_N
+X_HDMI1.Xpartial.10 X_HDMI1.Xpartial.12 HDMI1.10::HDMI_CLK_P HDMI1.12::HDMI_CLK_N HDMI_CLK_P||HDMI_CLK_N
+X_HDMI1.Xpartial.4 X_HDMI1.Xpartial.6 HDMI1.4::HDMI_DATA1_P HDMI1.6::HDMI_DATA1_N HDMI_DATA1_P||HDMI_DATA1_N
+X_HDMI1.Xpartial.7 X_HDMI1.Xpartial.9 HDMI1.7::HDMI_DATA0_P HDMI1.9::HDMI_DATA0_N HDMI_DATA0_P||HDMI_DATA0_N
+X_U8.Xpartial.C1 0 U8.C1::HDMI_CLK_P GND HDMI_CLK_P
+X_U8.Xpartial.C2 0 U8.C2::HDMI_CLK_N GND HDMI_CLK_N
+X_U8.Xpartial.D1 0 U8.D1::HDMI_DATA0_P GND HDMI_DATA0_P
+X_U8.Xpartial.D2 0 U8.D2::HDMI_DATA0_N GND HDMI_DATA0_N
+X_U8.Xpartial.E1 0 U8.E1::HDMI_DATA1_P GND HDMI_DATA1_P
+X_U8.Xpartial.E2 0 U8.E2::HDMI_DATA1_N GND HDMI_DATA1_N
+X_U8.Xpartial.C1 X_U8.Xpartial.C2 U8.C1::HDMI_CLK_P U8.C2::HDMI_CLK_N HDMI_CLK_P||HDMI_CLK_N
+X_U8.Xpartial.D1 X_U8.Xpartial.D2 U8.D1::HDMI_DATA0_P U8.D2::HDMI_DATA0_N HDMI_DATA0_P||HDMI_DATA0_N
+X_U8.Xpartial.E1 X_U8.Xpartial.E2 U8.E1::HDMI_DATA1_P U8.E2::HDMI_DATA1_N HDMI_DATA1_P||HDMI_DATA1_N
+.EndProbeMapping
+.SPEED2000
+.Mode = GeneralSI
+.EndSPEED2000
+
+.END

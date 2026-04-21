@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult type = "Total" xmlVersion = "2">
+	<Property>
+		<CopyRight>CopyRight (C) 2012 Cadence Design Systems, Inc. All Rights Reserved.</CopyRight>
+		<TimeStamp>2026-04-12 20:51:41</TimeStamp>
+		<ProductVersion>
+			<SPDGEN version = "21.1.4.11171.321455   004" />
+			<SPDSIM version = "21.1.4.11121.319401   004" />
+		</ProductVersion>
+	</Property>
+	<Period>2.000000</Period>
+	<Curve path = "SPModel_GSI_V.CUR"/>
+	<Map>
+		<CKT cktname = "ESD2"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "ESD2.2::HDMI_DATA0_N::HDMI_DATA0_N" node2 = "X_ESD2.Xpartial.2,0" UI = "2.000" RingBackMarginHigh = "-0.013" RingBackMarginLow = "0.044" JEDECOverShootHigh = "0.298" JEDECOverShootLow = "0.386" PropagationDelay = "0.000" MinFirstSwitchRise = "0.153" MinFirstSwitchFall = "0.133" MaxFinalSettleRise = "0.328"  MaxFinalSettleFall = "0.211"/>
+						<NodePair node1 = "ESD2.10::HDMI_DATA0_P::HDMI_DATA0_P" node2 = "X_ESD2.Xpartial.10,0" UI = "2.000" RingBackMarginHigh = "0.042" RingBackMarginLow = "-0.008" JEDECOverShootHigh = "0.385" JEDECOverShootLow = "0.286" PropagationDelay = "0.000" MinFirstSwitchRise = "0.133" MinFirstSwitchFall = "0.154" MaxFinalSettleRise = "0.211"  MaxFinalSettleFall = "0.325"/>
+						<NodePair node1 = "ESD2.10::HDMI_DATA0_P::HDMI_DATA0_P||HDMI_DATA0_N" node2 = "X_ESD2.Xpartial.10,X_ESD2.Xpartial.2" UI = "2.000" RingBackMarginHigh = "0.386" RingBackMarginLow = "0.279" JEDECOverShootHigh = "0.771" JEDECOverShootLow = "0.584" PropagationDelay = "0.000" MinFirstSwitchRise = "0.151" MinFirstSwitchFall = "0.171" MaxFinalSettleRise = "0.187"  MaxFinalSettleFall = "0.195"/>
+				</PinPadNode>
+		</CKT>
+		<CKT cktname = "HDMI1"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "HDMI1.9::HDMI_DATA0_N::HDMI_DATA0_N" node2 = "X_HDMI1.Xpartial.9,0" UI = "2.000" RingBackMarginHigh = "0.120" RingBackMarginLow = "-0.090" JEDECOverShootHigh = "0.489" JEDECOverShootLow = "0.498" PropagationDelay = "0.000" MinFirstSwitchRise = "-1.405" MinFirstSwitchFall = "0.209" MaxFinalSettleRise = "0.259"  MaxFinalSettleFall = "0.253"/>
+						<NodePair node1 = "HDMI1.7::HDMI_DATA0_P::HDMI_DATA0_P" node2 = "X_HDMI1.Xpartial.7,0" UI = "2.000" RingBackMarginHigh = "-0.092" RingBackMarginLow = "0.134" JEDECOverShootHigh = "0.524" JEDECOverShootLow = "0.495" PropagationDelay = "0.000" MinFirstSwitchRise = "0.210" MinFirstSwitchFall = "0.222" MaxFinalSettleRise = "0.252"  MaxFinalSettleFall = "0.259"/>
+						<NodePair node1 = "HDMI1.7::HDMI_DATA0_P::HDMI_DATA0_P||HDMI_DATA0_N" node2 = "X_HDMI1.Xpartial.7,X_HDMI1.Xpartial.9" UI = "2.000" RingBackMarginHigh = "0.117" RingBackMarginLow = "0.554" JEDECOverShootHigh = "1.022" JEDECOverShootLow = "0.984" PropagationDelay = "0.000" MinFirstSwitchRise = "0.221" MinFirstSwitchFall = "0.234" MaxFinalSettleRise = "0.242"  MaxFinalSettleFall = "0.248"/>
+				</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "U8.D2::HDMI_DATA0_N::HDMI_DATA0_N" node2 = "X_U8.Xpartial.D2,0" UI = "2.000" RingBackMarginHigh = "0.341" RingBackMarginLow = "0.002" JEDECOverShootHigh = "0.741" JEDECOverShootLow = "1.231" PropagationDelay = "0.040" MinFirstSwitchRise = "0.228" MinFirstSwitchFall = "0.318" MaxFinalSettleRise = "0.303"  MaxFinalSettleFall = "0.339"/>
+						<NodePair node1 = "U8.D1::HDMI_DATA0_P::HDMI_DATA0_P" node2 = "X_U8.Xpartial.D1,0" UI = "2.000" RingBackMarginHigh = "-0.009" RingBackMarginLow = "0.374" JEDECOverShootHigh = "1.215" JEDECOverShootLow = "0.691" PropagationDelay = "0.040" MinFirstSwitchRise = "0.317" MinFirstSwitchFall = "0.221" MaxFinalSettleRise = "0.341"  MaxFinalSettleFall = "0.299"/>
+						<NodePair node1 = "U8.D1::HDMI_DATA0_P::HDMI_DATA0_P||HDMI_DATA0_N" node2 = "X_U8.Xpartial.D1,X_U8.Xpartial.D2" UI = "2.000" RingBackMarginHigh = "0.292" RingBackMarginLow = "1.015" JEDECOverShootHigh = "2.446" JEDECOverShootLow = "1.431" PropagationDelay = "0.040" MinFirstSwitchRise = "0.336" MinFirstSwitchFall = "0.249" MaxFinalSettleRise = "0.318"  MaxFinalSettleFall = "0.279"/>
+				</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>

@@ -1,0 +1,109 @@
+[IBIS Ver] 5.0
+[File Name] #taaaajj19560_xtalk_u8.ibs
+[File Rev] 1.0
+[Copyright] Cadence
+[Component] U8
+[Manufacturer] Cadence
+[Package]
+|
+| Variable Typ Min Max
+|
+R_pkg 0m 0m 0m
+L_pkg 0H 0H 0H
+C_pkg 0F 0F 0F
+|
+[Pin] signal_name model_name R_pin L_pin C_pin
+A4 N2739972 cds_bi_gen_2p5v_10_10pf
+A5 MIPI_DSI1_DATA3_P cds_bi_gen_2p5v_10_10pf
+A6 MIPI_DSI1_DATA2_P cds_bi_gen_2p5v_10_10pf
+A7 MIPI_DSI1_CLK_P cds_bi_gen_2p5v_10_10pf
+A8 MIPI_DSI1_DATA1_P cds_bi_gen_2p5v_10_10pf
+A9 MIPI_DSI1_DATA0_P cds_bi_gen_2p5v_10_10pf
+B5 MIPI_DSI1_DATA3_N cds_bi_gen_2p5v_10_10pf
+B6 MIPI_DSI1_DATA2_N cds_bi_gen_2p5v_10_10pf
+B7 MIPI_DSI1_CLK_N cds_bi_gen_2p5v_10_10pf
+B8 MIPI_DSI1_DATA1_N cds_bi_gen_2p5v_10_10pf
+B9 MIPI_DSI1_DATA0_N cds_bi_gen_2p5v_10_10pf
+C1 HDMI_CLK_P cds_bi_gen_2p5v_10_10pf
+C2 HDMI_CLK_N cds_bi_gen_2p5v_10_10pf
+D1 HDMI_DATA0_P cds_bi_gen_2p5v_10_10pf
+D10 MIPI_DSI0_DATA3_P cds_bi_gen_2p5v_10_10pf
+D2 HDMI_DATA0_N cds_bi_gen_2p5v_10_10pf
+D9 MIPI_DSI0_DATA3_N cds_bi_gen_2p5v_10_10pf
+E1 HDMI_DATA1_P cds_bi_gen_2p5v_10_10pf
+E10 MIPI_DSI0_DATA2_P cds_bi_gen_2p5v_10_10pf
+E2 HDMI_DATA1_N cds_bi_gen_2p5v_10_10pf
+E9 MIPI_DSI0_DATA2_N cds_bi_gen_2p5v_10_10pf
+F1 HDMI_DATA2_P cds_bi_gen_2p5v_10_10pf
+F10 MIPI_DSI0_CLK_P cds_bi_gen_2p5v_10_10pf
+F2 HDMI_DATA2_N cds_bi_gen_2p5v_10_10pf
+F9 MIPI_DSI0_CLK_N cds_bi_gen_2p5v_10_10pf
+G10 MIPI_DSI0_DATA1_P cds_bi_gen_2p5v_10_10pf
+G9 MIPI_DSI0_DATA1_N cds_bi_gen_2p5v_10_10pf
+H10 MIPI_DSI0_DATA0_P cds_bi_gen_2p5v_10_10pf
+H9 MIPI_DSI0_DATA0_N cds_bi_gen_2p5v_10_10pf
+K8 RESETN cds_bi_gen_2p5v_10_10pf
+|
+[Diff Pin] inv_pin vdiff tdelay_typ tdelay_min tdelay_max
+C1 C2 NA NA NA NA
+D1 D2 NA NA NA NA
+E1 E2 NA NA NA NA
+F1 F2 NA NA NA NA
+F10 F9 NA NA NA NA
+H10 H9 NA NA NA NA
+G10 G9 NA NA NA NA
+E10 E9 NA NA NA NA
+D10 D9 NA NA NA NA
+A7 B7 NA NA NA NA
+A9 B9 NA NA NA NA
+A8 B8 NA NA NA NA
+A6 B6 NA NA NA NA
+A5 B5 NA NA NA NA
+|
+[Model] cds_bi_gen_2p5v_10_10pf
+Model_type I/O
+Vinl=1.00V
+Vinh=1.50V
+Vmeas = 1250mV
+Vref = 1.25V
+Cref = 0.0pF
+Rref = 50Ohm
+|
+| variable typ min max 
+C_comp     10pF 10pF 10pF 
+|
+[Voltage Range] 2.5 2.5 2.5
+|
+[Pullup]
+-1.0000e+00          1.0000e-01  1.0000e-01  1.0000e-01
+0.0000e-00           0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          -1.0000e-01 -1.0000e-01 -1.0000e-01
+|
+[Pulldown]
+-1.0000e+00         -1.0000e-01 -1.0000e-01 -1.0000e-01
+0.0000e-00           0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00           1.0000e-01  1.0000e-01  1.0000e-01
+|
+[POWER_clamp]
+|voltage I(typ)
+|
+-1.0000e+00         0.0000e-00  0.0000e-00  0.0000e-00
+0.0000e-00          0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          0.0000e-00  0.0000e-00  0.0000e-00
+|
+[GND_clamp]
+|voltage I(typ)
+|
+-1.0000e+00         0.0000e-00  0.0000e-00  0.0000e-00
+0.0000e-00          0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          0.0000e-00  0.0000e-00  0.0000e-00
+|
+[Ramp]
+dV/dt_r  1.25/115ps NA NA
+dV/dt_f  1.25/115ps NA NA
+|
+R_load = 50
+|
+|
+|
+[End]

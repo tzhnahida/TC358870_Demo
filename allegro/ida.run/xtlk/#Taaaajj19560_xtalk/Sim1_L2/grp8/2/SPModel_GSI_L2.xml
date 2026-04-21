@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult type = "Total" xmlVersion = "2">
+	<Property>
+		<CopyRight>CopyRight (C) 2012 Cadence Design Systems, Inc. All Rights Reserved.</CopyRight>
+		<TimeStamp>2026-04-12 20:38:28</TimeStamp>
+		<ProductVersion>
+			<SPDGEN version = "21.1.4.11171.321455   004" />
+			<SPDSIM version = "21.1.4.11121.319401   004" />
+		</ProductVersion>
+	</Property>
+	<Period>2.000000</Period>
+	<Curve path = "SpModel_041226_203827_V.CUR"/>
+	<Map>
+		<CKT cktname = "CH1"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "CH1.9::MIPI_DSI0_DATA2_N::MIPI_DSI0_DATA2_N" node2 = "X_CH1.Xpartial.9,0" UI = "" max_xtalk = "2862.881" highpeak_xtalk = "2862.881" lowpeak_xtalk = "0.000"/>
+						<NodePair node1 = "CH1.10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P" node2 = "X_CH1.Xpartial.10,0" UI = "" max_xtalk = "2864.090" highpeak_xtalk = "0.000" lowpeak_xtalk = "2864.090"/>
+						<NodePair node1 = "CH1.10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P||MIPI_DSI0_DATA2_N" node2 = "X_CH1.Xpartial.10,X_CH1.Xpartial.9" UI = "" max_xtalk = "5726.180" highpeak_xtalk = "0.000" lowpeak_xtalk = "5726.180"/>
+						<NodePair node1 = "CH1.1::MIPI_DSI0_DATA3_N::MIPI_DSI0_DATA3_N" node2 = "X_CH1.Xpartial.1,0" UI = "" max_xtalk = "59.095" highpeak_xtalk = "29.377" lowpeak_xtalk = "29.718"/>
+						<NodePair node1 = "CH1.2::MIPI_DSI0_DATA3_P::MIPI_DSI0_DATA3_P" node2 = "X_CH1.Xpartial.2,0" UI = "" max_xtalk = "29.480" highpeak_xtalk = "13.089" lowpeak_xtalk = "16.391"/>
+						<NodePair node1 = "CH1.2::MIPI_DSI0_DATA3_P::MIPI_DSI0_DATA3_P||MIPI_DSI0_DATA3_N" node2 = "X_CH1.Xpartial.2,X_CH1.Xpartial.1" UI = "" max_xtalk = "55.728" highpeak_xtalk = "30.485" lowpeak_xtalk = "25.242"/>
+				</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "U8.E9::MIPI_DSI0_DATA2_N::MIPI_DSI0_DATA2_N" node2 = "X_U8.Xpartial.E9,0" UI = "" max_xtalk = "3634.586" highpeak_xtalk = "3634.586" lowpeak_xtalk = "0.000"/>
+						<NodePair node1 = "U8.E10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P" node2 = "X_U8.Xpartial.E10,0" UI = "" max_xtalk = "3631.804" highpeak_xtalk = "0.000" lowpeak_xtalk = "3631.804"/>
+						<NodePair node1 = "U8.E10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P||MIPI_DSI0_DATA2_N" node2 = "X_U8.Xpartial.E10,X_U8.Xpartial.E9" UI = "" max_xtalk = "7266.389" highpeak_xtalk = "0.000" lowpeak_xtalk = "7266.389"/>
+						<NodePair node1 = "U8.D9::MIPI_DSI0_DATA3_N::MIPI_DSI0_DATA3_N" node2 = "X_U8.Xpartial.D9,0" UI = "" max_xtalk = "132.107" highpeak_xtalk = "59.661" lowpeak_xtalk = "72.446"/>
+						<NodePair node1 = "U8.D10::MIPI_DSI0_DATA3_P::MIPI_DSI0_DATA3_P" node2 = "X_U8.Xpartial.D10,0" UI = "" max_xtalk = "51.409" highpeak_xtalk = "26.984" lowpeak_xtalk = "24.425"/>
+						<NodePair node1 = "U8.D10::MIPI_DSI0_DATA3_P::MIPI_DSI0_DATA3_P||MIPI_DSI0_DATA3_N" node2 = "X_U8.Xpartial.D10,X_U8.Xpartial.D9" UI = "" max_xtalk = "115.054" highpeak_xtalk = "62.635" lowpeak_xtalk = "52.418"/>
+				</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult  xmlVersion = "0">
+	<Curve path = "SpModel_041226_205140_V.CUR"/>
+	<Map>
+		<CKT cktname = "ESD1"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "ESD1.10::HDMI_DATA2_P::HDMI_DATA2_P" node2 = "X_ESD1.Xpartial.10,0"/>
+				<NodePair node1 = "ESD1.10::HDMI_DATA2_P::HDMI_DATA2_P||HDMI_DATA2_N" node2 = "X_ESD1.Xpartial.10,X_ESD1.Xpartial.2"/>
+				<NodePair node1 = "ESD1.1::HDMI_DATA2_P::HDMI_DATA2_P" node2 = "X_ESD1.Xpartial.1,0"/>
+				<NodePair node1 = "ESD1.1::HDMI_DATA2_P::HDMI_DATA2_P||HDMI_DATA2_N" node2 = "X_ESD1.Xpartial.1,X_ESD1.Xpartial.2"/>
+				<NodePair node1 = "ESD1.2::HDMI_DATA2_N::HDMI_DATA2_N" node2 = "X_ESD1.Xpartial.2,0"/>
+				<NodePair node1 = "ESD1.9::HDMI_DATA2_N::HDMI_DATA2_N" node2 = "X_ESD1.Xpartial.9,0"/>
+			</PinPadNode>
+		</CKT>
+		<CKT cktname = "HDMI1"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "HDMI1.1::HDMI_DATA2_P::HDMI_DATA2_P" node2 = "X_HDMI1.Xpartial.1,0"/>
+				<NodePair node1 = "HDMI1.1::HDMI_DATA2_P::HDMI_DATA2_P||HDMI_DATA2_N" node2 = "X_HDMI1.Xpartial.1,X_HDMI1.Xpartial.3"/>
+				<NodePair node1 = "HDMI1.3::HDMI_DATA2_N::HDMI_DATA2_N" node2 = "X_HDMI1.Xpartial.3,0"/>
+			</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "U8.F1::HDMI_DATA2_P::HDMI_DATA2_P" node2 = "X_U8.Xpartial.F1,0"/>
+				<NodePair node1 = "U8.F1::HDMI_DATA2_P::HDMI_DATA2_P||HDMI_DATA2_N" node2 = "X_U8.Xpartial.F1,X_U8.Xpartial.F2"/>
+				<NodePair node1 = "U8.F2::HDMI_DATA2_N::HDMI_DATA2_N" node2 = "X_U8.Xpartial.F2,0"/>
+			</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>

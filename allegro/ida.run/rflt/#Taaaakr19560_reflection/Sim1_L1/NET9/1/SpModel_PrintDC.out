@@ -1,0 +1,6 @@
+2.500000e+00 (V) X_CH1.Xpartial.1 0 
+1.003637e-10 (V) X_CH1.Xpartial.2 0 
+-2.500000e+00 (V) X_CH1.Xpartial.2 X_CH1.Xpartial.1 
+1.000000e-10 (V) X_U8.Xpartial.D10 0 
+-2.500000e+00 (V) X_U8.Xpartial.D10 X_U8.Xpartial.D9 
+2.500000e+00 (V) X_U8.Xpartial.D9 0 

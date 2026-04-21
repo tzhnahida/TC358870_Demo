@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult  xmlVersion = "0">
+	<Curve path = "SpModel_041226_205140_V.CUR"/>
+	<Map>
+		<CKT cktname = "CH1"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "CH1.5::MIPI_DSI0_CLK_N::MIPI_DSI0_CLK_N" node2 = "X_CH1.Xpartial.5,0"/>
+				<NodePair node1 = "CH1.6::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P" node2 = "X_CH1.Xpartial.6,0"/>
+				<NodePair node1 = "CH1.6::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P||MIPI_DSI0_CLK_N" node2 = "X_CH1.Xpartial.6,X_CH1.Xpartial.5"/>
+			</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "U8.F10::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P" node2 = "X_U8.Xpartial.F10,0"/>
+				<NodePair node1 = "U8.F10::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P||MIPI_DSI0_CLK_N" node2 = "X_U8.Xpartial.F10,X_U8.Xpartial.F9"/>
+				<NodePair node1 = "U8.F9::MIPI_DSI0_CLK_N::MIPI_DSI0_CLK_N" node2 = "X_U8.Xpartial.F9,0"/>
+			</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>

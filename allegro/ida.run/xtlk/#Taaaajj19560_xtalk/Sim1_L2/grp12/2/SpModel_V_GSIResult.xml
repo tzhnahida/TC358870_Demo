@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult  xmlVersion = "0">
+	<Curve path = "SpModel_041226_203823_V.CUR"/>
+	<Map>
+		<CKT cktname = "CH1"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "CH1.10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P" node2 = "X_CH1.Xpartial.10,0"/>
+				<NodePair node1 = "CH1.10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P||MIPI_DSI0_DATA2_N" node2 = "X_CH1.Xpartial.10,X_CH1.Xpartial.9"/>
+				<NodePair node1 = "CH1.11::MIPI_DSI1_DATA2_P::MIPI_DSI1_DATA2_P" node2 = "X_CH1.Xpartial.11,0"/>
+				<NodePair node1 = "CH1.11::MIPI_DSI1_DATA2_P::MIPI_DSI1_DATA2_P||MIPI_DSI1_DATA2_N" node2 = "X_CH1.Xpartial.11,X_CH1.Xpartial.12"/>
+				<NodePair node1 = "CH1.12::MIPI_DSI1_DATA2_N::MIPI_DSI1_DATA2_N" node2 = "X_CH1.Xpartial.12,0"/>
+				<NodePair node1 = "CH1.13::MIPI_DSI1_DATA1_P::MIPI_DSI1_DATA1_P" node2 = "X_CH1.Xpartial.13,0"/>
+				<NodePair node1 = "CH1.13::MIPI_DSI1_DATA1_P::MIPI_DSI1_DATA1_P||MIPI_DSI1_DATA1_N" node2 = "X_CH1.Xpartial.13,X_CH1.Xpartial.14"/>
+				<NodePair node1 = "CH1.14::MIPI_DSI1_DATA1_N::MIPI_DSI1_DATA1_N" node2 = "X_CH1.Xpartial.14,0"/>
+				<NodePair node1 = "CH1.15::MIPI_DSI1_CLK_P::MIPI_DSI1_CLK_P" node2 = "X_CH1.Xpartial.15,0"/>
+				<NodePair node1 = "CH1.15::MIPI_DSI1_CLK_P::MIPI_DSI1_CLK_P||MIPI_DSI1_CLK_N" node2 = "X_CH1.Xpartial.15,X_CH1.Xpartial.16"/>
+				<NodePair node1 = "CH1.16::MIPI_DSI1_CLK_N::MIPI_DSI1_CLK_N" node2 = "X_CH1.Xpartial.16,0"/>
+				<NodePair node1 = "CH1.19::MIPI_DSI1_DATA3_P::MIPI_DSI1_DATA3_P" node2 = "X_CH1.Xpartial.19,0"/>
+				<NodePair node1 = "CH1.19::MIPI_DSI1_DATA3_P::MIPI_DSI1_DATA3_P||MIPI_DSI1_DATA3_N" node2 = "X_CH1.Xpartial.19,X_CH1.Xpartial.20"/>
+				<NodePair node1 = "CH1.20::MIPI_DSI1_DATA3_N::MIPI_DSI1_DATA3_N" node2 = "X_CH1.Xpartial.20,0"/>
+				<NodePair node1 = "CH1.9::MIPI_DSI0_DATA2_N::MIPI_DSI0_DATA2_N" node2 = "X_CH1.Xpartial.9,0"/>
+			</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+			<PinPadNode DieWaveForms = "DieWaveForms">
+				<NodePair node1 = "U8.A5::MIPI_DSI1_DATA3_P::MIPI_DSI1_DATA3_P" node2 = "X_U8.Xpartial.A5,0"/>
+				<NodePair node1 = "U8.A5::MIPI_DSI1_DATA3_P::MIPI_DSI1_DATA3_P||MIPI_DSI1_DATA3_N" node2 = "X_U8.Xpartial.A5,X_U8.Xpartial.B5"/>
+				<NodePair node1 = "U8.A6::MIPI_DSI1_DATA2_P::MIPI_DSI1_DATA2_P" node2 = "X_U8.Xpartial.A6,0"/>
+				<NodePair node1 = "U8.A6::MIPI_DSI1_DATA2_P::MIPI_DSI1_DATA2_P||MIPI_DSI1_DATA2_N" node2 = "X_U8.Xpartial.A6,X_U8.Xpartial.B6"/>
+				<NodePair node1 = "U8.A7::MIPI_DSI1_CLK_P::MIPI_DSI1_CLK_P" node2 = "X_U8.Xpartial.A7,0"/>
+				<NodePair node1 = "U8.A7::MIPI_DSI1_CLK_P::MIPI_DSI1_CLK_P||MIPI_DSI1_CLK_N" node2 = "X_U8.Xpartial.A7,X_U8.Xpartial.B7"/>
+				<NodePair node1 = "U8.A8::MIPI_DSI1_DATA1_P::MIPI_DSI1_DATA1_P" node2 = "X_U8.Xpartial.A8,0"/>
+				<NodePair node1 = "U8.A8::MIPI_DSI1_DATA1_P::MIPI_DSI1_DATA1_P||MIPI_DSI1_DATA1_N" node2 = "X_U8.Xpartial.A8,X_U8.Xpartial.B8"/>
+				<NodePair node1 = "U8.B5::MIPI_DSI1_DATA3_N::MIPI_DSI1_DATA3_N" node2 = "X_U8.Xpartial.B5,0"/>
+				<NodePair node1 = "U8.B6::MIPI_DSI1_DATA2_N::MIPI_DSI1_DATA2_N" node2 = "X_U8.Xpartial.B6,0"/>
+				<NodePair node1 = "U8.B7::MIPI_DSI1_CLK_N::MIPI_DSI1_CLK_N" node2 = "X_U8.Xpartial.B7,0"/>
+				<NodePair node1 = "U8.B8::MIPI_DSI1_DATA1_N::MIPI_DSI1_DATA1_N" node2 = "X_U8.Xpartial.B8,0"/>
+				<NodePair node1 = "U8.E10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P" node2 = "X_U8.Xpartial.E10,0"/>
+				<NodePair node1 = "U8.E10::MIPI_DSI0_DATA2_P::MIPI_DSI0_DATA2_P||MIPI_DSI0_DATA2_N" node2 = "X_U8.Xpartial.E10,X_U8.Xpartial.E9"/>
+				<NodePair node1 = "U8.E9::MIPI_DSI0_DATA2_N::MIPI_DSI0_DATA2_N" node2 = "X_U8.Xpartial.E9,0"/>
+			</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>

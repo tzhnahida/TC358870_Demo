@@ -1,0 +1,73 @@
+[IBIS Ver] 5.0
+[File Name] #taaaakr19560_reflection_esd1.ibs
+[File Rev] 1.0
+[Copyright] Cadence
+[Component] ESD1
+[Manufacturer] Cadence
+[Package]
+|
+| Variable Typ Min Max
+|
+R_pkg 0m 0m 0m
+L_pkg 0H 0H 0H
+C_pkg 0F 0F 0F
+|
+[Pin] signal_name model_name R_pin L_pin C_pin
+1 HDMI_DATA2_P cds_bi_gen_2p5v_10_10pf
+10 HDMI_DATA2_P cds_bi_gen_2p5v_10_10pf
+2 HDMI_DATA2_N cds_bi_gen_2p5v_10_10pf
+4 HDMI_DATA1_P cds_bi_gen_2p5v_10_10pf
+5 HDMI_DATA1_N cds_bi_gen_2p5v_10_10pf
+6 HDMI_DATA1_N cds_bi_gen_2p5v_10_10pf
+7 HDMI_DATA1_P cds_bi_gen_2p5v_10_10pf
+9 HDMI_DATA2_N cds_bi_gen_2p5v_10_10pf
+|
+[Diff Pin] inv_pin vdiff tdelay_typ tdelay_min tdelay_max
+|
+[Model] cds_bi_gen_2p5v_10_10pf
+Model_type I/O
+Vinl=1.00V
+Vinh=1.50V
+Vmeas = 1250mV
+Vref = 1.25V
+Cref = 0.0pF
+Rref = 50Ohm
+|
+| variable typ min max 
+C_comp     10pF 10pF 10pF 
+|
+[Voltage Range] 2.5 2.5 2.5
+|
+[Pullup]
+-1.0000e+00          1.0000e-01  1.0000e-01  1.0000e-01
+0.0000e-00           0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          -1.0000e-01 -1.0000e-01 -1.0000e-01
+|
+[Pulldown]
+-1.0000e+00         -1.0000e-01 -1.0000e-01 -1.0000e-01
+0.0000e-00           0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00           1.0000e-01  1.0000e-01  1.0000e-01
+|
+[POWER_clamp]
+|voltage I(typ)
+|
+-1.0000e+00         0.0000e-00  0.0000e-00  0.0000e-00
+0.0000e-00          0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          0.0000e-00  0.0000e-00  0.0000e-00
+|
+[GND_clamp]
+|voltage I(typ)
+|
+-1.0000e+00         0.0000e-00  0.0000e-00  0.0000e-00
+0.0000e-00          0.0000e-00  0.0000e-00  0.0000e-00
+1.0000e+00          0.0000e-00  0.0000e-00  0.0000e-00
+|
+[Ramp]
+dV/dt_r  1.25/115ps NA NA
+dV/dt_f  1.25/115ps NA NA
+|
+R_load = 50
+|
+|
+|
+[End]

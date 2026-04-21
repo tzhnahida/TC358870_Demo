@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GSIResult type = "Total" xmlVersion = "2">
+	<Property>
+		<CopyRight>CopyRight (C) 2012 Cadence Design Systems, Inc. All Rights Reserved.</CopyRight>
+		<TimeStamp>2026-04-12 20:51:41</TimeStamp>
+		<ProductVersion>
+			<SPDGEN version = "21.1.4.11171.321455   004" />
+			<SPDSIM version = "21.1.4.11121.319401   004" />
+		</ProductVersion>
+	</Property>
+	<Period>2.000000</Period>
+	<Curve path = "SPModel_GSI_V.CUR"/>
+	<Map>
+		<CKT cktname = "CH1"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "CH1.5::MIPI_DSI0_CLK_N::MIPI_DSI0_CLK_N" node2 = "X_CH1.Xpartial.5,0" UI = "2.000" RingBackMarginHigh = "0.345" RingBackMarginLow = "0.365" JEDECOverShootHigh = "1.242" JEDECOverShootLow = "1.213" PropagationDelay = "0.120" MinFirstSwitchRise = "0.448" MinFirstSwitchFall = "0.399" MaxFinalSettleRise = "0.520"  MaxFinalSettleFall = "0.521"/>
+						<NodePair node1 = "CH1.6::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P" node2 = "X_CH1.Xpartial.6,0" UI = "2.000" RingBackMarginHigh = "0.354" RingBackMarginLow = "0.304" JEDECOverShootHigh = "1.213" JEDECOverShootLow = "1.276" PropagationDelay = "0.120" MinFirstSwitchRise = "0.395" MinFirstSwitchFall = "0.448" MaxFinalSettleRise = "0.520"  MaxFinalSettleFall = "0.515"/>
+						<NodePair node1 = "CH1.6::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P||MIPI_DSI0_CLK_N" node2 = "X_CH1.Xpartial.6,X_CH1.Xpartial.5" UI = "2.000" RingBackMarginHigh = "1.019" RingBackMarginLow = "0.950" JEDECOverShootHigh = "2.425" JEDECOverShootLow = "2.517" PropagationDelay = "0.120" MinFirstSwitchRise = "0.420" MinFirstSwitchFall = "0.470" MaxFinalSettleRise = "0.500"  MaxFinalSettleFall = "0.497"/>
+				</PinPadNode>
+		</CKT>
+		<CKT cktname = "U8"   active = "1">
+				<PinPadNode DieWaveForms = "DieWaveForms">
+						<NodePair node1 = "U8.F9::MIPI_DSI0_CLK_N::MIPI_DSI0_CLK_N" node2 = "X_U8.Xpartial.F9,0" UI = "2.000" RingBackMarginHigh = "0.225" RingBackMarginLow = "0.241" JEDECOverShootHigh = "0.395" JEDECOverShootLow = "0.390" PropagationDelay = "0.000" MinFirstSwitchRise = "0.107" MinFirstSwitchFall = "0.126" MaxFinalSettleRise = "0.155"  MaxFinalSettleFall = "0.155"/>
+						<NodePair node1 = "U8.F10::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P" node2 = "X_U8.Xpartial.F10,0" UI = "2.000" RingBackMarginHigh = "0.237" RingBackMarginLow = "0.191" JEDECOverShootHigh = "0.403" JEDECOverShootLow = "0.420" PropagationDelay = "0.000" MinFirstSwitchRise = "0.126" MinFirstSwitchFall = "0.106" MaxFinalSettleRise = "0.153"  MaxFinalSettleFall = "0.155"/>
+						<NodePair node1 = "U8.F10::MIPI_DSI0_CLK_P::MIPI_DSI0_CLK_P||MIPI_DSI0_CLK_N" node2 = "X_U8.Xpartial.F10,X_U8.Xpartial.F9" UI = "2.000" RingBackMarginHigh = "0.777" RingBackMarginLow = "0.716" JEDECOverShootHigh = "0.791" JEDECOverShootLow = "0.810" PropagationDelay = "0.000" MinFirstSwitchRise = "0.141" MinFirstSwitchFall = "0.121" MaxFinalSettleRise = "0.140"  MaxFinalSettleFall = "0.141"/>
+				</PinPadNode>
+		</CKT>
+	</Map>
+</GSIResult>
