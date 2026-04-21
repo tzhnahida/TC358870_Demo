@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/23/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/24/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -99,7 +99,21 @@
     ("Allegro Netlist Combine Property String" "PCB Footprint")
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
-    (Board_sim_option "VHDL_flow"))
+    (Board_sim_option "VHDL_flow")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.bom")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}\t{Model}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCB Footprint\tMPN")
+    (BOM_Include_File
+       "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE"))
   (Folder "Layout"
     (File ".\allegro\tc358870_demo.brd"
       (Type "Board File")
@@ -132,7 +146,11 @@
       (DisplayName "pstxprt.dat"))
     (File ".\allegro\pstchip.dat"
       (Type "Report")
-      (DisplayName "pstchip.dat")))
+      (DisplayName "pstchip.dat"))
+    (File ".\tc358870_demo.csv"
+      (Type "Report"))
+    (File ".\tc358870_demo.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -247,28 +265,18 @@
       (Path "Logs")
       (Select "Design Resources"
          "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo" "3.TC358870"))
+         "TC358870_Demo" "2.DISPLAY_POWER_DRIVER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 732"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 297 0 732"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "-175 -4")
-        (Zoom "83")
-        (Occurrence "/"))
-      (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
-      (Schematic "TC358870_Demo")
-      (Page "1.POWER_TREE"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "405 668")
+        (Placement "44 0 1 -1 -1 5 28 5 1418 28 754")
+        (Scroll "550 101")
         (Zoom "166")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -277,9 +285,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "1943 1760")
-        (Zoom "332")
+        (Placement "44 0 1 -1 -1 5 28 5 1418 28 754")
+        (Scroll "-182 14")
+        (Zoom "87")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -287,9 +295,19 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1357 28 754")
-        (Scroll "0 295")
-        (Zoom "252")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1418 28 754")
+        (Scroll "0 668")
+        (Zoom "166")
+        (Occurrence "/"))
+      (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
+      (Schematic "TC358870_Demo")
+      (Page "1.POWER_TREE"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1418 28 754")
+        (Scroll "-205 16")
+        (Zoom "100")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
