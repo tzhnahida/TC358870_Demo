@@ -1,6 +1,11 @@
 # TC358870XBG HDMI-to-MIPI DSI Bridge — Evaluation Board
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![PCB Status](https://img.shields.io/badge/PCB_Rev_1.0-Deprecated-red.svg)](design-notes.md)
+
+> **Project code:** `tb` &nbsp;|&nbsp; **PCB name:** `tc358870_demo` &nbsp;|&nbsp; **Current PCB:** Rev 1.0 **(deprecated — do not fabricate)**
+>
+> See **[design-notes.md](design-notes.md)** for version history, errata details, lessons learned, and the Rev 2.0 plan.
 
 A 4-layer PCB reference design for the **Toshiba TC358870XBG** bridge chip, which converts an **HDMI 1.4b** input stream (up to 4K×2K @30 fps, 7.2 Gbps) to a **dual-link MIPI DSI** output (up to 1 Gbps per data lane). The board is controlled by an on-board MCU via I2C and is supported by full signal-integrity simulation data.
 
@@ -67,7 +72,29 @@ A 4-layer PCB reference design for the **Toshiba TC358870XBG** bridge chip, whic
 - Via stitch fence along the HDMI/MIPI partition boundaries
 - All differential pairs routed with 5 mil trace width / 7 mil spacing (on outer layers)
 
-### Power Delivery
+### PCB Design Errata
+
+#### Errata (Rev 1.0)
+
+| Signal | Issue | Correct | Hardware Fix |
+|--------|-------|---------|--------------|
+| MIPI DSI lanes | Lane/clock pair order swapped per datasheet | Swap per pin mapping | Re-route or bodge-wire — this rev damaged the LCD panel |
+| HPDO (B4) | Shorted to VCC_HDMIRX_IN (+5V) | → 1 KΩ → HDMI pin 19 (HPD) | Cut trace to +5V, add 1 KΩ to HPD |
+| HPDI (A4) | → R25 (100 KΩ) → HDMI pin 19 (HPD) | → 100 KΩ → HDMI pin 18 (+5V) | Move R25 from HPD to +5V rail |
+
+> **Note:** The DSI lane/clock ordering mistake in Rev 1.0 caused the connected LCD panel to burn in
+> (permanent pixel damage) because the panel ASIC received lane data on the wrong physical pairs.
+
+#### Updates (Next Rev)
+
+> See **[design-notes.md](design-notes.md)** for the full Rev 2.0 change list and planning notes.
+
+| Interface | Current | Plan |
+|-----------|---------|------|
+| DDC bus | Direct to TC358870 only | Add EEPROM + external I2C connector |
+| MIPI DSI lanes | Swapped (errata) | Re-route per datasheet pin mapping |
+
+## Power Delivery
 
 | Rail | Voltage | Source | Max Current (Est.) | Ripple Requirement |
 |------|---------|--------|-------------------|-------------------|
@@ -122,22 +149,22 @@ Essential I2C register map (refer to `TC358870XBG_rev1.3.pdf` sections 5.2–5.1
 |------|------|-------------|
 | `TC358870_DEMO.DSN` | OrCAD Capture 17.4 | Full schematic |
 | `TC358870_Demo.opj` | OrCAD Capture 17.4 | Project file |
-| `allegro/tc358870_demo.brd` | Cadence Allegro PCB Editor 17.4 | PCB layout (4-layer) |
-| `allegro/bf.brd` | Cadence Allegro PCB Editor | Backup / variant layout |
-| `allegro/gerber.zip` | — | Fabrication gerber set |
-| `allegro/gerber/` | — | Individual Gerber RS-274X files |
+| `deprecated/tc358870_demo.brd` | Cadence Allegro PCB Editor 17.4 | PCB layout (4-layer) — **Rev 1.0, deprecated** |
+| `deprecated/bf.brd` | Cadence Allegro PCB Editor | Backup / variant layout — **deprecated** |
+| `deprecated/gerber.zip` | — | Fabrication gerber set — **deprecated** |
+| `deprecated/gerber/` | — | Individual Gerber RS-274X files — **deprecated** |
 | `TC358870_DEMO.bom.xlsx` | — | Bill of materials |
-| `allegro/dcdc.mdd` | Allegro PCB Designer | DCDC module master drawing |
-| `allegro/ldo.mdd` | Allegro PCB Designer | LDO module master drawing |
-| `allegro/ida.run/` | Cadence PowerSI | Signal integrity and power-integrity simulation |
-| `allegro/signoise.run/` | Cadence SigNoise | Crosstalk analysis |
+| `deprecated/dcdc.mdd` | Allegro PCB Designer | DCDC module master drawing — **deprecated** |
+| `deprecated/ldo.mdd` | Allegro PCB Designer | LDO module master drawing — **deprecated** |
+| `deprecated/ida.run/` | Cadence PowerSI | Signal integrity and power-integrity simulation |
+| `deprecated/signoise.run/` | Cadence SigNoise | Crosstalk analysis |
 | `Test_code/TestCode.ioc` | STM32CubeMX | MCU pin/clock configuration |
 | `Test_code/Core/` | Keil MDK-ARM v5 | Firmware source code (C) |
 | `Test_code/TC358870XBG_rev1.3.pdf` | — | Official Toshiba datasheet |
 
 ### Fabrication Outputs (Gerber RS-274X)
 
-Located in `allegro/gerber/`:
+Located in `deprecated/gerber/`:
 
 | File | Content |
 |------|---------|
@@ -172,7 +199,9 @@ Located in `allegro/gerber/`:
 
 ### PCB Fabrication
 
-1. Extract `allegro/gerber/` and send all `.art` files plus the `.drl` drill file to your manufacturer.
+> **Warning:** Rev 1.0 is deprecated. See **[design-notes.md](design-notes.md)** before fabricating.
+
+1. Extract `deprecated/gerber/` and send all `.art` files plus the `.drl` drill file to your manufacturer.
 2. Specify **4-layer**, **1.6 mm** nominal thickness, **FR-4** (or equivalent), **ENIG** finish.
 3. Impedance control: **100 Ω differential** on outer layers for HDMI and MIPI DSI pairs.
 
@@ -180,14 +209,14 @@ Located in `allegro/gerber/`:
 
 ## Signal Integrity
 
-The `allegro/ida.run/` directory contains **Cadence PowerSI** simulation results:
+The `deprecated/ida.run/` directory contains **Cadence PowerSI** simulation results:
 
 - **S-parameter extraction** for the HDMI TMDS and MIPI DSI channels (DC to 5 GHz)
 - **Crosstalk analysis** between DSI0 and DSI1 lane bundles (`xtlk/`)
 - **Time-domain reflectometry (TDR)** impedance profiles
 - **IR drop analysis** for the power delivery network
 
-Refer to `allegro/ida.run/rtp/` for fitted touchstone (`.s20p`) models and SPICE netlists of the critical interconnects.
+Refer to `deprecated/ida.run/rtp/` for fitted touchstone (`.s20p`) models and SPICE netlists of the critical interconnects.
 
 ---
 

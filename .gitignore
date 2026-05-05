@@ -9,11 +9,20 @@
 *.asv
 
 # 2. 排除日志与交互文件
-*.jrl
+*.jrl*
 *.tag
 *.lck
+*.DSNlck
 *.txt
 # 注意：如果你的元件清单(BOM)是txt格式，请改用 !BOM.txt 来排除过滤
+
+# Allegro large binary files
+*.brd
+gerber*
+*.zip
+
+# Deprecated design files (Rev 1.0 — screen-burn errata)
+deprecated/
 
 
 

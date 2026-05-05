@@ -1,0 +1,29 @@
+{
+    "cSpell.words": [
+        "TC358870",
+        "TC358870XBG",
+        "Toshiba",
+        "TMDS",
+        "EDID",
+        "HPDO",
+        "HPDI",
+        "DDC",
+        "ENIG",
+        "MIPI",
+        "DSI",
+        "BGA",
+        "DCDC",
+        "PHY",
+        "APLL",
+        "eFuse",
+        "InfoFrame",
+        "ASIC",
+        "deserializer",
+        "errata",
+        "fanout",
+        "tape-out",
+        "bodge-wire"
+    ],
+    "projectWorkingDocument": "design-notes.md",
+    "projectWorkingDocument.description": "This is the project's living working document. Review and update it whenever there are design changes, new findings, or version updates."
+}
