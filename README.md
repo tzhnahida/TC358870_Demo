@@ -1,234 +1,268 @@
 # TC358870XBG HDMI-to-MIPI DSI Bridge — Evaluation Board
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![PCB Status](https://img.shields.io/badge/PCB_Rev_1.0-Deprecated-red.svg)](design-notes.md)
+> **PCB Rev 1.0 is deprecated.** Do not fabricate. MIPI DSI lane swap errata + HPD wiring errors.
+> **Rev 2.0:** Layout complete. SI/PI simulation pending.
 
-> **Project code:** `tb` &nbsp;|&nbsp; **PCB name:** `tc358870_demo` &nbsp;|&nbsp; **Current PCB:** Rev 1.0 **(deprecated — do not fabricate)**
->
-> See **[design-notes.md](design-notes.md)** for version history, errata details, lessons learned, and the Rev 2.0 plan.
-
-A 4-layer PCB reference design for the **Toshiba TC358870XBG** bridge chip, which converts an **HDMI 1.4b** input stream (up to 4K×2K @30 fps, 7.2 Gbps) to a **dual-link MIPI DSI** output (up to 1 Gbps per data lane). The board is controlled by an on-board MCU via I2C and is supported by full signal-integrity simulation data.
+A 4-layer PCB for the Toshiba TC358870XBG, converting HDMI 1.4b (up to 297 MHz TMDS) to dual 4-lane MIPI DSI (up to 1 Gbps/lane). Designed to drive a Sharp LS029B3SX01 1440×1440@90Hz LCD panel.
 
 ---
 
-## Hardware Overview
+## Hardware
 
 ### Key Components
 
-| Component | Part Number | Function |
-|-----------|-------------|----------|
-| Bridge IC | Toshiba TC358870XBG (BGA80) | HDMI 1.4b RX → MIPI DSI dual-link TX |
-| Controller | STM32 (ST) | I2C master for register configuration, EDID management, HPD control |
-| Power DCDC | — | Core supply (1.15 V) and MIPI D-PHY (1.2 V) |
-| Power LDO | — | I/O (1.8 V / 3.3 V), HDMI (3.3 V), APLL (3.3 V) |
+| Designator | Part | Function |
+|-----------|------|----------|
+| U1 | TYPE-C 16-pin | 5V power input (USB-C) |
+| U2 | TLV62569DBV | 5V→3.3V DCDC buck (VCC_3V3) |
+| U3 | LP5907MFX | 3.3V→1.2V LDO (VCC_1V2) |
+| U4 | TLV62569DBV | 5V→1.1V DCDC buck (VCC_1V1) |
+| U5 | LP5907MFX | 3.3V→1.8V LDO (VCC_1V8) |
+| U6 | TPS65131RGER | 5V→±5.5V charge pump (panel AVDD/AVEE) |
+| U7 | SGM3752YTN6G | 3.3V→LED backlight boost (22mA max) |
+| U8 | AT24C02 (SOP-8) | DDC EEPROM, EDID storage |
+| U9A/B/C/D | TC358870XBG (BGA80) | HDMI Rx → dual MIPI DSI Tx (4-page schematic) |
+| ESD1/2/3 | IP4292CZ10 | HDMI ESD protection |
+| Q1 | PMOS | Power switch |
+| OSC1 | 40 MHz | REFCLK for TC358870 |
+| J1 | HDMI-A | HDMI input connector |
+| J2 | WP7 (JAE 40-pin) | Panel FPC, mates with LS029B3SX01 |
 
-### Block Diagram
+### Power Rails
 
+| Rail | Voltage | Source | Load |
+|------|---------|--------|------|
+| VCC_5V | 5.0V | USB-C | Input bus |
+| VCC_3V3 | 3.3V | 5V→3.3V DCDC buck (TLV62569) | TC358870 VDDIO33, VDD33_HDMI; feeds LDOs + LED |
+| VCC_1V8 | 1.8V | 3.3V→1.8V LDO (LP5907) | TC358870 VDDIO18 |
+| VCC_1V2 | 1.2V | 3.3V→1.2V LDO (LP5907) | TC358870 VDD12_MIPI0/1 |
+| VCC_1V1 | 1.1V | 5V→1.1V DCDC buck (TLV62569) | TC358870 VDDC11, VDD11_HDMI |
+| VCC_5V5 | +5.5V | 5V charge pump (TPS65131) | LS029 AVDD+ |
+| VEE_5V5 | -5.5V | 5V charge pump (TPS65131) | LS029 AVEE- |
+| VCC_HDMIRX_IN | +5V (from HDMI source) | HDMI pin 18 | DDC pull-up |
+
+### PCB Stack-Up (4-layer)
+
+| Layer | Type |
+|-------|------|
+| TOP | Signal (HDMI, MIPI, I2C, REFCLK) |
+| L2 | Solid GND plane |
+| L3 | Split POWER plane |
+| BOTTOM | Signal, decoupling, test points |
+
+---
+
+## Known Issues
+
+### AT24C256 → AT24C02 ✅ Resolved in Schematic
+
+Schematic symbol value updated to AT24C02 (2026-06-29). Original AT24C256 uses **2-byte I2C addressing** — incompatible with HDMI DDC which only sends 1 address byte for EDID reads. AT24C02 uses same SOP-8 footprint and 1-byte addressing (¥0.5). PCB footprint unchanged. Library symbol name still shows "AT24C256" but BOM and silk-screen will read AT24C02.
+
+### EDID: External EEPROM Only
+
+TC358870 contains 1 KB internal EDID SRAM, but **its I2C sub-address is not documented in the public datasheet** (`TC358870XBG_rev1.3.pdf`). Use external AT24C02 on the DDC bus with `EDID_MODE = 0x00` (DDC passthrough to EEPROM).
+
+### Rev 1.0 Errata
+
+| Signal | Issue | Fix |
+|--------|-------|-----|
+| MIPI DSI lanes | Lane/clock pair order swapped per datasheet | Re-route per pin mapping |
+| HPDO (B4) | Shorted to +5V | Cut trace, add 1kΩ to HDMI pin 19 |
+| HPDI (A4) | Connected to HPD pin | Move to HDMI pin 18 (+5V) via 100kΩ |
+
+---
+
+## EDID
+
+The board ships with a 256-byte EDID for LS029B3SX01 (1440×1440@90.2Hz). Flash this to the AT24C02 via the DDC bus (STM32 can take control while TC358870 is held in reset):
+
+```c
+const uint8_t edid_ls029b3sx01[256] = {
+    0x00,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x00,
+    0x4D,0x10,0x02,0x29,0x01,0x00,0x00,0x00,
+    0x1A,0x24,0x01,0x03,0x80,0x34,0x34,0x78,
+    0xEE,0x91,0x50,0x54,0x9C,0x27,0x0E,0x50,
+    0x54,0xBF,0xEF,0x00,0x00,0x00,0x01,0x01,
+    0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01,
+    0x01,0x01,0x01,0x01,0x01,0x01,0x2F,0x66,
+    0xA0,0xFE,0x50,0xA0,0x10,0x51,0x9A,0x04,
+    0xF1,0xC0,0x34,0x34,0x10,0x00,0x00,0x00,
+    0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+    0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+    0x00,0x00,0x00,0x00,0x00,0xFD,0x00,0x32,
+    0x5E,0x14,0xA0,0x1E,0x00,0x00,0x00,0x00,
+    0x00,0x0A,0x00,0x00,0x00,0x00,0x00,0xFC,
+    0x00,0x4C,0x53,0x30,0x32,0x39,0x42,0x33,
+    0x53,0x58,0x30,0x31,0x00,0x00,0x01,0x19,
+    0x02,0x03,0x0E,0x00,0x21,0x01,0x67,0x00,
+    0x0C,0x03,0x01,0x00,0x00,0x00,0x00,0x00,
+    // ... (see wiki LS029B3SX01.md for full verified array)
+};
+// Checksums: Block0=0x19, Block1=0x54
+// 1440×1440, 261.6 MHz pixel clock, 90.2 Hz
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                      TC358870XBG (BGA80)                        │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────────┐  │
-│  │ HDMI-RX  │  │ HDCP 1.4 │  │  Video   │  │   DSI TX0      │──┤── CDSI0 D[0:3]P/N + CLKP/N
-│  │ TMDS     │→ │ Decrypt  │→ │  FIFO    │→ │   DSI TX1      │──┤── CDSI1 D[0:3]P/N + CLKP/N
-│  │ 297 MHz  │  │ + eFuse  │  │ + CSC    │  └────────────────┘  │
-│  └──────────┘  └──────────┘  └──────────┘                      │
-│                                            ┌────────────────┐  │
-│                   I2C Slave ────────────── │  RegFile &     │  │
-│                   (Addr: 0x0F / 0x1F)      │  EDID SRAM     │  │
-│                                            │  (1 KB)        │  │
-│                                            └────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-
-              ▲                            ▲
-              │ I2C                        │ HDMI
-         ┌────┴─────┐                ┌─────┴──────┐
-         │   STM32   │               │ HDMI Source │
-         │ (I2C Mst) │               │  (GPU/SOC)  │
-         └──────────┘               └─────────────┘
-```
-
-### PCB Stack-Up (4 Layers)
-
-| Layer | Type | Notes |
-|-------|------|-------|
-| TOP | Signal | HDMI TMDS, MIPI DSI, I2C, REFCLK, Audio |
-| L2 (GND) | Solid Plane | Continuous ground return for all high-speed signals |
-| L3 (POWER) | Split Plane | 1.15 V / 1.2 V / 1.8 V / 3.3 V |
-| BOTTOM | Signal | Decoupling, test points, auxiliary routing |
-
-### High-Speed Interface Routing
-
-| Interface | Speed | Length Matching | Impedance Target |
-|-----------|-------|----------------|------------------|
-| HDMI TMDS (3 data + 1 clock) | ≤ 297 MHz pixel clock | ±5 mil within each pair | 100 Ω differential |
-| MIPI DSI0 (4 lanes + clock) | 1 Gbps per lane | ±5 mil within pair, ±20 mil between lanes | 100 Ω differential |
-| MIPI DSI1 (4 lanes + clock) | 1 Gbps per lane | ±5 mil within pair, ±20 mil between lanes | 100 Ω differential |
-| REFCLK | 40–50 MHz | — | 50 Ω single-ended |
-
-**SI counter-measures applied:**
-- Continuous GND plane on L2 beneath all high-speed traces
-- AC-coupling capacitors placed close to HDMI RX pins (0.1 µF per TMDS line)
-- MIPI DSI series termination resistors (0–10 Ω) placed near the bridge outputs
-- Via stitch fence along the HDMI/MIPI partition boundaries
-- All differential pairs routed with 5 mil trace width / 7 mil spacing (on outer layers)
-
-### PCB Design Errata
-
-#### Errata (Rev 1.0)
-
-| Signal | Issue | Correct | Hardware Fix |
-|--------|-------|---------|--------------|
-| MIPI DSI lanes | Lane/clock pair order swapped per datasheet | Swap per pin mapping | Re-route or bodge-wire — this rev damaged the LCD panel |
-| HPDO (B4) | Shorted to VCC_HDMIRX_IN (+5V) | → 1 KΩ → HDMI pin 19 (HPD) | Cut trace to +5V, add 1 KΩ to HPD |
-| HPDI (A4) | → R25 (100 KΩ) → HDMI pin 19 (HPD) | → 100 KΩ → HDMI pin 18 (+5V) | Move R25 from HPD to +5V rail |
-
-> **Note:** The DSI lane/clock ordering mistake in Rev 1.0 caused the connected LCD panel to burn in
-> (permanent pixel damage) because the panel ASIC received lane data on the wrong physical pairs.
-
-#### Updates (Next Rev)
-
-> See **[design-notes.md](design-notes.md)** for the full Rev 2.0 change list and planning notes.
-
-| Interface | Current | Plan |
-|-----------|---------|------|
-| DDC bus | Direct to TC358870 only | Add EEPROM + external I2C connector |
-| MIPI DSI lanes | Swapped (errata) | Re-route per datasheet pin mapping |
-
-## Power Delivery
-
-| Rail | Voltage | Source | Max Current (Est.) | Ripple Requirement |
-|------|---------|--------|-------------------|-------------------|
-| VDDC_CORE | 1.15 V | DCDC | 500 mA | < 30 mVpp |
-| VDD12_MIPI0/1 | 1.2 V | DCDC | 200 mA (each) | < 20 mVpp |
-| VDDIO18 | 1.8 V | LDO | 150 mA | < 30 mVpp |
-| VDDIO33 / VDD33_HDMI | 3.3 V | LDO | 300 mA | < 30 mVpp |
-| VDD33_APLL | 3.3 V | LDO (filtered) | 50 mA | < 10 mVpp |
 
 ---
 
 ## Firmware
 
-The on-board STM32 controller is responsible for:
+### Register Initialization Sequence
 
-- **I2C register configuration** of the TC358870XBG (all internal registers, clock generation, DSI PHY tuning)
-- **EDID management** using the bridge's internal 1 KB EDID SRAM (no external EEPROM required)
-- **HPD (Hot-Plug Detect) sequencing** — the chip can assert HPD in manual mode or interlock with DDC 5V detection
-- **DSI PLL programming** — generates up to 1 Gbps per data lane from a 40–50 MHz REFCLK
-- **Interrupt handling** — video timing change, HDCP events, InfoFrame updates
+The STM32 (or any I2C master at 0x0F/0x1F) must write this sequence at power-up:
 
-The MCU project is configured via **STM32CubeMX** (`.ioc`) and compiled with **Keil MDK-ARM**.
+```
+ 1. SYSCTL     (0x0002) = 0x3F01   // full reset + SLEEP, delay 1ms
+ 2. SYSCTL     (0x0002) = 0x0000   // release
+ 3. ConfCtl0   (0x0004) = 0x0004   // AutoIndex=1
+ 4. ConfCtl1   (0x0006) = 0x0008   // dcs_clks=1
+ 5. SYS_FREQ0  (0x8540) = ...      // REFCLK_Hz / 10000  LSB
+ 6. SYS_FREQ1  (0x8541) = ...      // REFCLK_Hz / 10000  MSB
+ 7. EDID_MODE  (0x85E0) = 0x00     // DDC passthrough to external EEPROM
+ 8. DDCIO_CTL  (0x84F4): 0→1      // DDC I/O power-up edge
+ 9. DDC_CTL    (0x8543) = 0x04     // DDC_ACTION=1
+10. PHY_ENB    (0x8413) |= 0x01    // exit Suspend
+11. PHY_RSTX   (0x8414) |= 0x01    // release PHY reset
+12. VOUT_FMT   (0x8A00) = 0x00     // RGB output
+13. VOUT_CSC   (0x8A08) = 0x00     // no CSC
+14. ConfCtl0   (0x0004) = 0x0007   // Vtx0_en + Vtx1_en + AutoIndex
+15. INIT_END   (0x854A) = 0x01     // init complete
+16. HPD_CTL    (0x8544) = 0x01     // assert HPD
+```
 
-Essential I2C register map (refer to `TC358870XBG_rev1.3.pdf` sections 5.2–5.11 for full details):
+### DSI Configuration (40 MHz REFCLK, 800 Mbps/lane target)
 
-| Address | Register | Function |
-|---------|----------|----------|
-| `0x0000` | ChipID | Read-only chip identification (`0x47`) |
-| `0x0002` | SysCtl | System control, **SLEEP** (bit 0) |
-| `0x0004` | ConfCtl0 | Video/Audio path enable |
-| `0x0108` | DSITX0_CLKEN | DSI0 clock enable |
-| `0x0118` | DSITX0_LANE_EN | DSI0 lane enable (4 lanes) |
-| `0x011C` | DSITX0_START | DSI0 stream start trigger |
-| `0x02A0` | MIPI_PLL_CTRL | DSI0 PLL and clock control |
-| `0x02AC` | MIPI_PLL_CONF | DSI0 PLL divider configuration |
-| `0x0400` | EDID_SRAM_BASE | Internal EDID SRAM (1 KB) |
-| `0x8410` | PHY_CTL | HDMI PHY control (auto/manual) |
-| `0x8413` | PHY_ENB | HDMI PHY enable |
-| `0x8414` | PHY_RSTX | HDMI PHY reset |
-| `0x8520` | SYS_STATUS | 5V detect, HPD source status |
-| `0x8544` | HPD_CTL | HPD output control (bit 4: mode, bit 0: output) |
-| `0x854A` | INIT_END | Initialization complete flag |
-| `0x85E0` | EDID_MODE | EDID source select (0 = external, 1 = internal SRAM) |
-| `0x85E3` | EDID_LEN1 | EDID length low byte |
-| `0x85E4` | EDID_LEN2 | EDID length high byte |
+```
+MIPI_PLL_CONF (0x02AC) = 0x0003793F  // {0x3F,0x79,0x03,0x00}
+//   FBD=319, PRD=7, FRS=2, LBW=max
+//   pll_clk = 40MHz × 320/8 / 4 = 400 MHz → 800 Mbps/lane
 
----
+MIPI_PLL_CTRL (0x02A0) = 0x03        // MP_ENABLE + MP_CKEN
+while (!(read(0x02A8) & 0x01));       // wait for PLL lock
 
-## Design Files
+PPI_DPHY_POWERCNTRL (0x0284) = 0x1F
+DSITX_CLKEN   (0x0108)  = 0x01
+MODE_CONFIG   (0x0110)  = 0x16    // IndMode=1, HSYNC/VSYNC active-low
+FUNC_MODE     (0x0150)  = 0x00    // discontinuous clock, no EoT
+DSITX_MODE    (0x017C)  = 0x00    // LP blanking, pulse mode
+LANE_ENABLE   (0x0118)  = 0x1F    // CK + D0-D3 all lanes
+DSI_HSYNC_WIDTH (0x018C) = 0x0004
+DSI_HBPR      (0x0190) = 0x0092
+```
 
-| File | Tool | Description |
-|------|------|-------------|
-| `TC358870_DEMO.DSN` | OrCAD Capture 17.4 | Full schematic |
-| `TC358870_Demo.opj` | OrCAD Capture 17.4 | Project file |
-| `deprecated/tc358870_demo.brd` | Cadence Allegro PCB Editor 17.4 | PCB layout (4-layer) — **Rev 1.0, deprecated** |
-| `deprecated/bf.brd` | Cadence Allegro PCB Editor | Backup / variant layout — **deprecated** |
-| `deprecated/gerber.zip` | — | Fabrication gerber set — **deprecated** |
-| `deprecated/gerber/` | — | Individual Gerber RS-274X files — **deprecated** |
-| `TC358870_DEMO.bom.xlsx` | — | Bill of materials |
-| `deprecated/dcdc.mdd` | Allegro PCB Designer | DCDC module master drawing — **deprecated** |
-| `deprecated/ldo.mdd` | Allegro PCB Designer | LDO module master drawing — **deprecated** |
-| `deprecated/ida.run/` | Cadence PowerSI | Signal integrity and power-integrity simulation |
-| `deprecated/signoise.run/` | Cadence SigNoise | Crosstalk analysis |
-| `Test_code/TestCode.ioc` | STM32CubeMX | MCU pin/clock configuration |
-| `Test_code/Core/` | Keil MDK-ARM v5 | Firmware source code (C) |
-| `Test_code/TC358870XBG_rev1.3.pdf` | — | Official Toshiba datasheet |
+### Panel DCS Initialization
 
-### Fabrication Outputs (Gerber RS-274X)
+LS029B3SX01 uses an NT35597 driver IC with NVM pre-programmed by Sharp. Only 5 DCS commands needed (sent via TC358870 LPTX registers in LP mode, before video starts):
 
-Located in `deprecated/gerber/`:
+| Step | Command | Data Type | Wait |
+|------|---------|-----------|------|
+| 1 | `0xFF 0x10` | DCS Short Write 1p (0x15) | — |
+| 2 | `0x11` (Sleep Out) | DCS Short Write 0p (0x05) | ≥100ms |
+| 3 | `0xFF 0x10` | DCS Short Write 1p (0x15) | — |
+| 4 | `0x29` (Display On) | DCS Short Write 0p (0x05) | ≥40ms |
 
-| File | Content |
-|------|---------|
-| `1_TOP.art` | Top copper |
-| `2_GND.art` | Ground plane (L2) |
-| `3_POWER.art` | Power plane (L3) |
-| `4_BOTTOM.art` | Bottom copper |
-| `SILKSCREEN_TOP/BOTTOM.art` | Silkscreen legends |
-| `SOLDMASK_TOP/BOTTOM.art` | Solder mask openings |
-| `PASTEMASK_TOP/BOTTOM.art` | Paste mask for stencil |
-| `ASM_TOP/BOTTOM.art` | Assembly drawings |
-| `tc358870_demo-1-4.drl` | NC drill file |
-| `DRILL.art` | Drill legend |
+LPTX register sequence per command:
+```c
+LPTX_TYPE        (0x022C) = 0x00000384;   // Trigger0, LPDT=1, ALL lanes
+DSI_LPTX_PKT_HDR (0x0230) = <packed DT+WC>; // e.g. 0x10FF0015 for DT=0x15, cmd=0xFF
+DSI_LPTX_REQ     (0x0228) = 0x01;
+while (!(read(0x0220) & 0x01));            // wait LpTxDone
+write(0x0220) = 0x01;                      // clear
+```
 
----
+After DCS commands complete, start HS video:
+```c
+DSITX_START (0x011C) = 0x01;
+```
 
-## Getting Started
+### Panel Hardware Power-Up (MCU GPIO control, before DCS)
 
-### Prerequisites
-
-- Cadence OrCAD Capture 17.4 (or later) — schematic viewing/editing
-- Cadence Allegro PCB Editor 17.4 (or later) — PCB layout viewing/editing
-- Cadence PowerSI (optional) — SI/PI simulation
-- Keil MDK-ARM v5 — firmware compilation and debug
-- STM32CubeMX — MCU peripheral configuration
-
-### Firmware Build
-
-1. Open `Test_code/MDK-ARM/TestCode.uvprojx` in Keil MDK-ARM.
-2. Build and download to the target STM32.
-3. The MCU enumerates the bridge via I2C, writes the EDID into the internal SRAM, and asserts HPD.
-
-### PCB Fabrication
-
-> **Warning:** Rev 1.0 is deprecated. See **[design-notes.md](design-notes.md)** before fabricating.
-
-1. Extract `deprecated/gerber/` and send all `.art` files plus the `.drl` drill file to your manufacturer.
-2. Specify **4-layer**, **1.6 mm** nominal thickness, **FR-4** (or equivalent), **ENIG** finish.
-3. Impedance control: **100 Ω differential** on outer layers for HDMI and MIPI DSI pairs.
+```
+1. XRES = L (assert reset)
+2. IOVDD 1.8V ON → wait stable
+3. AVDD+ 5.5V ON → wait >1ms
+4. AVDD- -5.5V ON → wait >10ms
+5. XRES = H → ≥20µs → L → ≥20µs → H
+6. Wait ≥10ms (NVM auto-load)
+```
 
 ---
 
-## Signal Integrity
+## Key Registers Reference
 
-The `deprecated/ida.run/` directory contains **Cadence PowerSI** simulation results:
+Full register documentation is in `TC358870XBG_rev1.3.pdf` (311 pages). See wiki `TC358870.md` for the complete register map with bit-level definitions.
 
-- **S-parameter extraction** for the HDMI TMDS and MIPI DSI channels (DC to 5 GHz)
-- **Crosstalk analysis** between DSI0 and DSI1 lane bundles (`xtlk/`)
-- **Time-domain reflectometry (TDR)** impedance profiles
-- **IR drop analysis** for the power delivery network
+| Address | Register | Summary |
+|---------|----------|---------|
+| `0x0000` | ChipID | RO, `0x0047` |
+| `0x0002` | SysCtl | Reset bits [13:6], SLEEP [0] |
+| `0x0004` | ConfCtl0 | Vtx0_en [0], Vtx1_en [1], AutoIndex [2] |
+| `0x0006` | ConfCtl1 | dcs_clks [3] |
+| `0x0108` | DSITX_CLKEN | DSI0 clock enable |
+| `0x0110` | MODE_CONFIG | IndMode [4], HSYNC_POL [2], VSYNC_POL [1] |
+| `0x0118` | LANE_ENABLE | Lane enable [4:0] = CK/D0/D1/D2/D3 |
+| `0x011C` | DSITX_START | Write 1 to start video |
+| `0x0150` | FUNC_MODE | HsCkMd [5], EoTpEn [0] |
+| `0x017C` | DSITX_MODE | BlankPkt_En [7], DSITXMd [0] |
+| `0x018C` | DSI_HSYNC_WIDTH | HSA in bytes |
+| `0x0190` | DSI_HBPR | HBP in bytes |
+| `0x0220-0x0238` | LPTX regs | LP-mode DCS command transmission |
+| `0x0284` | PPI_DPHY_POWERCNTRL | D-PHY lane power |
+| `0x02A0` | MIPI_PLL_CTRL | MP_ENABLE, MP_CKEN |
+| `0x02A8` | MIPI_PLL_LOCK | RO, bit[0]=1 when locked |
+| `0x02AC` | MIPI_PLL_CONF | FBD[8:0], PRD[3:0], FRS[1:0], LBW[1:0] |
+| `0x5000` | STX0_CTRL | Splitter control (manual/auto) |
+| `0x500C` | STX0_FPX | STX0 first pixel (0-4095) |
+| `0x500E` | STX0_LPX | STX0 last pixel |
+| `0x508C` | STX1_FPX | STX1 first pixel |
+| `0x508E` | STX1_LPX | STX1 last pixel |
+| `0x8410` | PHY_CTL | PHYCtl [0]: 0=manual, 1=auto |
+| `0x8413` | PHY_ENB | PHYEnb [0] |
+| `0x8414` | PHY_RSTX | PHY reset [0] |
+| `0x84F4` | DDCIO_CTL | DDCPWR [0]: 0→1 edge required |
+| `0x8520` | SYS_STATUS | S_DDC5V [0], S_TMDS [1], S_PHY_SCDT [3] |
+| `0x8540-0x8541` | SYS_FREQ | REFCLK_Hz / 10000 |
+| `0x8543` | DDC_CTL | DDC_ACTION [2], DDC5V_MODE [1:0] |
+| `0x8544` | HPD_CTL | HPD_CTL0 [1], HPD_OUT0 [0] |
+| `0x854A` | INIT_END | Write 0x01 to complete init |
+| `0x85E0` | EDID_MODE | 00=external EEPROM, 01=internal+DDC2B, 1x=internal+E-DDC |
+| `0x85E3` | EDID_LEN1 | EDID length [7:0] |
+| `0x85E4` | EDID_LEN2 | EDID length [10:8] |
+| `0x8A00` | VOUT_FMT | VOUT_SEL [1:0] |
+| `0x8A08` | VOUT_CSC | VOUT_COLOR_SEL [6:4], CSC_Mode [1:0] |
 
-Refer to `deprecated/ida.run/rtp/` for fitted touchstone (`.s20p`) models and SPICE netlists of the critical interconnects.
+---
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `TC358870_DEMO.DSN` | OrCAD Capture schematic (4 pages) |
+| `TC358870_DEMO.EDF` | EDIF schematic export (plain text) |
+| `TC358870_Demo.opj` | OrCAD project |
+| `TC358870_DEMO.pdf` | Schematic PDF |
+| `allegro/tc358870_demo.brd` | Allegro PCB layout (Rev 2.0) |
+| `allegro/tc358870_demo.ipc` | IPC-D-356A netlist for bare-board testing |
+| `allegro/signoise.run/cases.cfg` | Cadence SigNoise simulation config |
+| `Test_code/` | STM32F103 firmware (Keil MDK-ARM) |
+
+---
+
+## Panel
+
+| Parameter | Value |
+|-----------|-------|
+| Model | Sharp LS029B3SX01 |
+| Resolution | 1440×1440 |
+| Refresh | 90.2 Hz |
+| Interface | MIPI DSI dual 4-lane |
+| DSI rate | 784.8 Mbps/lane |
+| Driver IC | NT35597 (NVM pre-configured) |
+| Connector | JAE WP7B-P040VA1 (40-pin B2B) |
+
+See wiki `LS029B3SX01.md` for full datasheet parameters, DCS init sequence, DSI timing, and EDID binary.
 
 ---
 
 ## License
 
-This project is licensed under the **Apache License, Version 2.0**. See [LICENSE](LICENSE) for details.
-
----
-
-## References
-
-- [TC358870XBG Datasheet (rev 1.3)](Test_code/TC358870XBG_rev1.3.pdf) — Toshiba
-- *HDMI Specification 1.4a* — HDMI Licensing, LLC
-- *MIPI DSI Specification v1.1* — MIPI Alliance
-- *MIPI D-PHY Specification v1.00* — MIPI Alliance
+Apache 2.0. See [LICENSE](LICENSE).
