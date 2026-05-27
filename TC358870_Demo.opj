@@ -276,7 +276,8 @@
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo"))
+      (Select "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo"
+         "3.TC358870"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
