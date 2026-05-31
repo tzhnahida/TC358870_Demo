@@ -1,7 +1,7 @@
 # TC358870XBG HDMI-to-MIPI DSI Bridge — Evaluation Board
 
 > **PCB Rev 1.0 is deprecated.** Do not fabricate. MIPI DSI lane swap errata + HPD wiring errors.
-> **Rev 2.0:** Layout complete. SI/PI simulation pending.
+> **Rev 2.0:** Layout complete. HDMI SI/PI simulation passed. Gerber released — ready for fabrication.
 
 A 4-layer PCB for the Toshiba TC358870XBG, converting HDMI 1.4b (up to 297 MHz TMDS) to dual 4-lane MIPI DSI (up to 1 Gbps/lane). Designed to drive a Sharp LS029B3SX01 1440×1440@90Hz LCD panel.
 
@@ -236,13 +236,13 @@ Full register documentation is in `TC358870XBG_rev1.3.pdf` (311 pages). See wiki
 
 | File | Description |
 |------|-------------|
-| `TC358870_DEMO.DSN` | OrCAD Capture schematic (4 pages) |
-| `TC358870_DEMO.EDF` | EDIF schematic export (plain text) |
+| `TC358870_DEMO.DSN` | OrCAD Capture schematic |
 | `TC358870_Demo.opj` | OrCAD project |
 | `TC358870_DEMO.pdf` | Schematic PDF |
 | `allegro/tc358870_demo.brd` | Allegro PCB layout (Rev 2.0) |
+| `allegro/gerber.zip` | Gerber fabrication files (Rev 2.0) |
 | `allegro/tc358870_demo.ipc` | IPC-D-356A netlist for bare-board testing |
-| `allegro/signoise.run/cases.cfg` | Cadence SigNoise simulation config |
+| `allegro/signoise.run/` | Cadence SigNoise SI/PI simulation config & data |
 | `Test_code/` | STM32F103 firmware (Keil MDK-ARM) |
 
 ---
