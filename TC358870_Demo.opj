@@ -134,6 +134,11 @@
       (Type "Board File")
       (OutputBoard ".\allegro\ldo.mdd")
       (NetListPath ".\allegro")
+      (ActiveBoard "0"))
+    (File ".\allegro\lcd.mdd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\lcd.mdd")
+      (NetListPath ".\allegro")
       (ActiveBoard "0")))
   (Folder "Outputs"
     (File ".\tc358870_demo.drc"
@@ -281,13 +286,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 234 0 631"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 631"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
-        (Scroll "-67 -3")
+        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
+        (Scroll "-84 -3")
         (Zoom "71")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -296,7 +301,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
+        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
         (Scroll "0 253")
         (Zoom "192")
         (Occurrence "/"))
@@ -306,8 +311,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
-        (Scroll "983 624")
+        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
+        (Scroll "938 624")
         (Zoom "184")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -316,7 +321,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
+        (Placement "44 0 1 -1 -1 5 28 5 1035 28 653")
         (Scroll "0 345")
         (Zoom "210")
         (Occurrence "/"))
