@@ -1,6 +1,0 @@
-("devices.dml" 
- (DesignLink 
-  (tc358870_demodl 
-   (Drawings 
-    (A "tc358870_demo.brd" ) ) ) ) 
- (LibraryVersion 136.2 ) ) 
