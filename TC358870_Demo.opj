@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[06/26/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[06/27/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -266,23 +266,29 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\tc358870_demo.dsn")
-      (Path "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo")
+      (Path "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
+      (Path "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo")
       (Path "Layout")
       (Path "Outputs")
-      (Path "Logs"))
+      (Path "Logs")
+      (Select "Design Resources"
+         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
+         "TC358870_Demo" "2.DISPLAY_POWER_DRIVER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 50 0 631"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 234 0 631"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
-        (Scroll "0 242")
-        (Zoom "184")
+        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
+        (Scroll "-67 -3")
+        (Zoom "71")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -290,7 +296,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
         (Scroll "0 253")
         (Zoom "192")
         (Occurrence "/"))
@@ -300,9 +306,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
-        (Scroll "0 0")
-        (Zoom "92")
+        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
+        (Scroll "983 624")
+        (Zoom "184")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -310,7 +316,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Placement "44 0 1 -1 -1 5 28 5 1001 28 653")
         (Scroll "0 345")
         (Zoom "210")
         (Occurrence "/"))
