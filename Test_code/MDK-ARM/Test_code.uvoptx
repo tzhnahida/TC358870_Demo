@@ -156,66 +156,146 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>111</LineNumber>
+          <LineNumber>210</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226478</Address>
+          <Address>134218920</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Core/Src/main.c</Filename>
+          <Filename>..\Core\Src\EDID.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/main.c\111</Expression>
+          <Expression>\\Test_code\../Core/Src/EDID.c\210</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>110</LineNumber>
+          <LineNumber>118</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226464</Address>
+          <Address>134219112</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Core/Src/main.c</Filename>
+          <Filename>..\Core\Src\EDID.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/main.c\110</Expression>
+          <Expression>\\Test_code\../Core/Src/EDID.c\118</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>59</LineNumber>
+          <LineNumber>114</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218668</Address>
+          <Address>134219098</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Core\Src\AT24C02.c</Filename>
+          <Filename>..\Core\Src\EDID.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/AT24C02.c\59</Expression>
+          <Expression>\\Test_code\../Core/Src/EDID.c\114</Expression>
         </Bp>
         <Bp>
           <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>63</LineNumber>
+          <LineNumber>103</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218680</Address>
+          <Address>134219052</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Core\Src\AT24C02.c</Filename>
+          <Filename>..\Core\Src\EDID.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/AT24C02.c\63</Expression>
+          <Expression>\\Test_code\../Core/Src/EDID.c\103</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>100</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134219038</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\Core\Src\EDID.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Test_code\../Core/Src/EDID.c\100</Expression>
+        </Bp>
+        <Bp>
+          <Number>5</Number>
+          <Type>0</Type>
+          <LineNumber>94</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134219024</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\Core\Src\EDID.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Test_code\../Core/Src/EDID.c\94</Expression>
+        </Bp>
+        <Bp>
+          <Number>6</Number>
+          <Type>0</Type>
+          <LineNumber>85</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218996</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\Core\Src\EDID.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Test_code\../Core/Src/EDID.c\85</Expression>
+        </Bp>
+        <Bp>
+          <Number>7</Number>
+          <Type>0</Type>
+          <LineNumber>77</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218976</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\Core\Src\EDID.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Test_code\../Core/Src/EDID.c\77</Expression>
+        </Bp>
+        <Bp>
+          <Number>8</Number>
+          <Type>0</Type>
+          <LineNumber>201</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218898</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\Core\Src\EDID.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Test_code\../Core/Src/EDID.c\201</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -228,6 +308,11 @@
           <count>1</count>
           <WinNumber>1</WinNumber>
           <ItemText>readBuffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>status</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -312,7 +397,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>../Core/Src/main.c</PathWithFileName>
