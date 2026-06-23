@@ -43,10 +43,10 @@
  * -------------------------------------------------------------------------- */
 
 /** @brief 写入单字节 — 含 ACK 轮询 + 读回校验 + 重试 (MAX_RETRIES 次) */
-HAL_StatusTypeDef AT24C02_WriteByte(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData);
+HAL_StatusTypeDef AT24C02_WriteByte(uint16_t DevAddress, uint16_t MemAddress, const uint8_t *pData);
 
 /** @brief 连续写入多字节 — 逐字节调用 WriteByte (校验和重试由 WriteByte 负责) */
-HAL_StatusTypeDef AT24C02_Write(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData, uint16_t Size);
+HAL_StatusTypeDef AT24C02_Write(uint16_t DevAddress, uint16_t MemAddress, const uint8_t *pData, uint16_t Size);
 
 /** @brief 连续读取多字节 — Sequential Read 一次读取, 芯片内部地址自动递增 */
 HAL_StatusTypeDef AT24C02_Read(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData, uint16_t Size);

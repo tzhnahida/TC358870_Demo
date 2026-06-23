@@ -70,6 +70,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  EDID_StatusTypeDef edidStatus = EDID_Init();
   while (1)
   {
   }

@@ -34,14 +34,14 @@
  * @retval HAL_ERROR    校验失败, 超过最大重试次数
  * @retval 其他          I2C 总线错误 (HAL_ERROR / HAL_TIMEOUT / HAL_BUSY)
  */
-HAL_StatusTypeDef AT24C02_WriteByte(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData)
+HAL_StatusTypeDef AT24C02_WriteByte(uint16_t DevAddress, uint16_t MemAddress, const uint8_t *pData)
 {
   HAL_StatusTypeDef status = HAL_OK;
   uint8_t readData;
   int retryCount = 0;
   do
   {
-    status = HAL_I2C_Mem_Write(AT24C02_I2C, DevAddress, MemAddress, I2C_MEMADD_SIZE_8BIT, pData, 1, I2C_TIMEOUT);
+    status = HAL_I2C_Mem_Write(AT24C02_I2C, DevAddress, MemAddress, I2C_MEMADD_SIZE_8BIT, (uint8_t *)pData, 1, I2C_TIMEOUT);
     if (status != HAL_OK)
     {
       return status;
@@ -94,7 +94,7 @@ HAL_StatusTypeDef AT24C02_WriteByte(uint16_t DevAddress, uint16_t MemAddress, ui
  *         ACK 轮询等待写周期 + 读回比对, 最多重试 MAX_RETRIES 次。
  *         任一字节写入失败即返回错误, 后续数据不再继续。
  */
-HAL_StatusTypeDef AT24C02_Write(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData, uint16_t Size)
+HAL_StatusTypeDef AT24C02_Write(uint16_t DevAddress, uint16_t MemAddress, const uint8_t *pData, uint16_t Size)
 {
     HAL_StatusTypeDef status = HAL_OK;
     if (Size == 0)

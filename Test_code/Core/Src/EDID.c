@@ -6,6 +6,8 @@
  * 校验流程: 固定头 → 主块校验和 → 扩展块数量 → 各扩展块校验和
  */
 
+#include <string.h>
+
 #include "EDID.h"
 
 
@@ -38,7 +40,7 @@ EDID_StatusTypeDef EDID_Read(uint8_t *pEDID, uint16_t size)
  * @note   AT24C02_Write 内部调用 WriteByte, 每字节写入后 ACK 轮询等待
  *         写周期 + 读回比对校验, 失败自动重试 MAX_RETRIES 次。
  */
-EDID_StatusTypeDef EDID_Write(uint8_t *pEDID, uint16_t size)
+EDID_StatusTypeDef EDID_Write(const uint8_t *pEDID, uint16_t size)
 {
     HAL_StatusTypeDef status = HAL_OK;
     status = AT24C02_Write(AT24C02_ADDRESS_Write, 0x00, pEDID, size);
@@ -70,7 +72,7 @@ EDID_StatusTypeDef EDID_Write(uint8_t *pEDID, uint16_t size)
  * @retval EDID_STATUS_BAD_BLOCK_COUNT      扩展块数量超限
  * @retval EDID_STATUS_BAD_BLOCK_CHECKSUM   扩展块校验和错误
  */
-EDID_StatusTypeDef EDID_Validate(uint8_t *pEDID, uint16_t size)
+EDID_StatusTypeDef EDID_Validate(const uint8_t *pEDID, uint16_t size)
 {
     // 1. 最小大小检查
     if (size < 128) {
@@ -78,7 +80,7 @@ EDID_StatusTypeDef EDID_Validate(uint8_t *pEDID, uint16_t size)
     }
 
     // 2. 固定头校验 (前 8 字节必须匹配)
-    static const uint8_t HEADER[8] = {
+    const uint8_t HEADER[8] = {
         0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00
     };
     if (memcmp(pEDID, HEADER, 8) != 0) {
@@ -202,7 +204,7 @@ EDID_StatusTypeDef EDID_Init(void)
     }
 
     // EDID 无效, 用内置模板覆盖 EEPROM
-    status = EDID_Write((uint8_t *)edid_ls029b3sx01, sizeof(edid_ls029b3sx01));
+    status = EDID_Write(edid_ls029b3sx01, sizeof(edid_ls029b3sx01));
     if (status != EDID_STATUS_SUCCESS)
     {
         return status; // 写入失败, 无法恢复

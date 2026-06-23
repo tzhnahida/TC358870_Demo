@@ -22,7 +22,7 @@
 #ifndef __EDID_H__
 #define __EDID_H__
 
-#include <string.h>
+
 
 #include "main.h"
 #include "i2c.h"
@@ -87,10 +87,10 @@ typedef enum {
 EDID_StatusTypeDef EDID_Read(uint8_t *pEDID, uint16_t size);
 
 /** @brief 将 EDID 数据写入 EEPROM (含逐字节校验) */
-EDID_StatusTypeDef EDID_Write(uint8_t *pEDID, uint16_t size);
+EDID_StatusTypeDef EDID_Write(const uint8_t *pEDID, uint16_t size);
 
 /** @brief 校验 EDID 数据完整性 (头/校验和/扩展块) */
-EDID_StatusTypeDef EDID_Validate(uint8_t *pEDID, uint16_t size);
+EDID_StatusTypeDef EDID_Validate(const uint8_t *pEDID, uint16_t size);
 
 /** @brief EDID 初始化: 读 EEPROM → 校验 → 无效则回退内置模板 */
 EDID_StatusTypeDef EDID_Init(void);
