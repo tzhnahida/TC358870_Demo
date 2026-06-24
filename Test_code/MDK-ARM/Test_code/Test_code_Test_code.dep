@@ -1,7 +1,7 @@
 Dependencies for Project 'Test_code', Target 'Test_code': (DO NOT MODIFY !)
 CompilerVersion: 5050106::V5.05 update 1 (build 106)::.\ARMCC
 F (startup_stm32f103xe.s)(0x6A4CCD90)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 543" --pd "STM32F10X_HD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xe.lst --xref -o test_code\startup_stm32f103xe.o --depend test_code\startup_stm32f103xe.d)
-F (../Core/Src/main.c)(0x6A4DF69E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\main.o --omf_browse test_code\main.crf --depend test_code\main.d)
+F (../Core/Src/main.c)(0x6A4DFF85)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\main.o --omf_browse test_code\main.crf --depend test_code\main.d)
 I (../Core/Inc/main.h)(0x6A4CE75C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69A18A9A)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A4CCD8F)
@@ -28,7 +28,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
 I (../Core/Inc/gpio.h)(0x6A4CCD8E)
 F (../Core/Src/gpio.c)(0x6A4CCD8E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\gpio.o --omf_browse test_code\gpio.crf --depend test_code\gpio.d)
@@ -59,7 +59,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
 F (../Core/Src/i2c.c)(0x6A4CCD8E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\i2c.o --omf_browse test_code\i2c.crf --depend test_code\i2c.d)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
@@ -89,7 +89,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 F (../Core/Src/stm32f1xx_it.c)(0x6A4CCD8E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\stm32f1xx_it.o --omf_browse test_code\stm32f1xx_it.crf --depend test_code\stm32f1xx_it.d)
 I (../Core/Inc/main.h)(0x6A4CE75C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69A18A9A)
@@ -117,7 +117,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
 I (../Core/Inc/stm32f1xx_it.h)(0x6A4CCD8E)
 F (../Core/Src/stm32f1xx_hal_msp.c)(0x6A4CCD8F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\stm32f1xx_hal_msp.o --omf_browse test_code\stm32f1xx_hal_msp.crf --depend test_code\stm32f1xx_hal_msp.d)
@@ -147,10 +147,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
-F (..\Core\Src\AT24C02.c)(0x6A4DFB8E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\at24c02.o --omf_browse test_code\at24c02.crf --depend test_code\at24c02.d)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+F (..\Core\Src\AT24C02.c)(0x6A4DFC11)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\at24c02.o --omf_browse test_code\at24c02.crf --depend test_code\at24c02.d)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/main.h)(0x6A4CE75C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69A18A9A)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A4CCD8F)
@@ -178,8 +178,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
-F (..\Core\Src\EDID.c)(0x6A4CE614)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\edid.o --omf_browse test_code\edid.crf --depend test_code\edid.d)
-I (../Core/Inc/EDID.h)(0x6A4CE606)
+F (..\Core\Src\EDID.c)(0x6A4E0EC4)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\edid.o --omf_browse test_code\edid.crf --depend test_code\edid.d)
+I (../Core/Inc/EDID.h)(0x6A4E0E95)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (../Core/Inc/main.h)(0x6A4CE75C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69A18A9A)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A4CCD8F)
@@ -206,7 +207,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x69A18A9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x69A18A9A)
-I (../Core/Inc/AT24C02.h)(0x6A4CE1D1)
+I (../Core/Inc/AT24C02.h)(0x6A4DFC1C)
 I (../Core/Inc/i2c.h)(0x6A4CCD8E)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x69A18A9A)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Test_code-ID:\Arm\Packs\ARM\CMSIS\5.5.0\CMSIS\Core\Include-ID:\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o test_code\stm32f1xx_hal_gpio_ex.o --omf_browse test_code\stm32f1xx_hal_gpio_ex.crf --depend test_code\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69A18A9A)
