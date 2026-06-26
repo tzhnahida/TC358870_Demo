@@ -6,6 +6,7 @@
 *.log*
 *.bak
 *.sav
+*.[0-9]sav
 *.asv
 
 # 2. 排除日志与交互文件
@@ -24,7 +25,10 @@ gerber*
 # Deprecated design files (Rev 1.0 — screen-burn errata)
 deprecated/
 
-
+# Claude Code
+.claude/
+.codegraph/
+CLAUDE.md
 
 # 4. 必须保留的核心设计文件 (白名单参考)
 # *.DSN (原理图)
@@ -33,7 +37,6 @@ deprecated/
 # *.BRD (PCB布局)
 # *.DRA (封装源码)
 # *.PSM (封装库)
- Prerequisites
 *.d
 
 # Object files

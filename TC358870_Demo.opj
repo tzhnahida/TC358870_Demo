@@ -1,6 +1,6 @@
 (ExpressProject "TC358870_Demo"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[03/24/26]")
+  (SoftwareVersion "17.4-2019 S039 (4153571)  [11/4/2023]-[06/26/26]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -176,6 +176,14 @@
       (LogFile
          "f:\projects\pcb\github\public\tc358870_demo\allegro\genfeed.log")))
   (PartMRUSelector
+    (WP7B-S040VA1-R8000
+      (FullPartName "WP7B-S040VA1-R8000.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\WP7.OLB")
+      (DeviceIndex "0"))
+    (AT24C256
+      (FullPartName "AT24C256.Normal")
+      (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\AT24C256.OLB")
+      (DeviceIndex "0"))
     (M
       (FullPartName "M.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\M.OLB")
@@ -262,22 +270,19 @@
          "TC358870_Demo")
       (Path "Layout")
       (Path "Outputs")
-      (Path "Logs")
-      (Select "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo" "2.DISPLAY_POWER_DRIVER"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 297 0 732"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 811"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1418 28 754")
-        (Scroll "550 101")
-        (Zoom "166")
+        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
+        (Scroll "0 580")
+        (Zoom "184")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -285,9 +290,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1418 28 754")
-        (Scroll "-182 14")
-        (Zoom "87")
+        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
+        (Scroll "1655 1501")
+        (Zoom "384")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -295,9 +300,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1418 28 754")
-        (Scroll "0 668")
-        (Zoom "166")
+        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
+        (Scroll "-100 -6")
+        (Zoom "92")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -305,9 +310,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1418 28 754")
-        (Scroll "-205 16")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
+        (Scroll "710 611")
+        (Zoom "210")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
