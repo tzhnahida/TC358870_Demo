@@ -17,8 +17,8 @@
 *.txt
 # 注意：如果你的元件清单(BOM)是txt格式，请改用 !BOM.txt 来排除过滤
 
-# Allegro large binary files
-*.brd
+# Allegro backup files
+allegro/bf.brd
 gerber*
 *.zip
 

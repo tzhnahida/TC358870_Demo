@@ -99,7 +99,6 @@
     ("Allegro Netlist Combine Property String" "PCB Footprint")
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
-    (Board_sim_option "VHDL_flow")
     (BOM_Scope "0")
     (BOM_Mode "0")
     (BOM_Report_File
@@ -113,7 +112,8 @@
     (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
     (BOM_One_Part_Per_Line "FALSE")
     (Open_BOM_in_Excel "TRUE")
-    (BOM_View_Output "FALSE"))
+    (BOM_View_Output "FALSE")
+    (Board_sim_option "VHDL_flow"))
   (Folder "Layout"
     (File ".\allegro\tc358870_demo.brd"
       (Type "Board File")
@@ -176,6 +176,9 @@
       (LogFile
          "f:\projects\pcb\github\public\tc358870_demo\allegro\genfeed.log")))
   (PartMRUSelector
+    (GND
+      (LibraryName "D:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (WP7B-S040VA1-R8000
       (FullPartName "WP7B-S040VA1-R8000.Normal")
       (LibraryName "F:\PROJECTS\PCB\LIBRARY\SYMBOLS\WP7.OLB")
@@ -263,11 +266,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn")
-      (Path "Design Resources"
-         "f:\projects\pcb\github\public\tc358870_demo\tc358870_demo.dsn"
-         "TC358870_Demo")
+      (Path "Design Resources" ".\tc358870_demo.dsn")
+      (Path "Design Resources" ".\tc358870_demo.dsn" "TC358870_Demo")
       (Path "Layout")
       (Path "Outputs")
       (Path "Logs"))
@@ -275,13 +275,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 811"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 50 0 631"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
-        (Scroll "0 580")
+        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Scroll "0 242")
         (Zoom "184")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -290,9 +290,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
-        (Scroll "1655 1501")
-        (Zoom "384")
+        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Scroll "0 253")
+        (Zoom "192")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
       (Schematic "TC358870_Demo")
@@ -300,8 +300,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
-        (Scroll "-100 -6")
+        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Scroll "0 0")
         (Zoom "92")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
@@ -310,8 +310,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1312 28 833")
-        (Scroll "710 611")
+        (Placement "44 0 1 -1 -1 5 28 5 974 28 653")
+        (Scroll "0 345")
         (Zoom "210")
         (Occurrence "/"))
       (Path "F:\PROJECTS\PCB\GITHUB\PUBLIC\TC358870_DEMO\TC358870_DEMO.DSN")
