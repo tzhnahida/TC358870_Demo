@@ -158,7 +158,7 @@
           <Type>0</Type>
           <LineNumber>111</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226486</Address>
+          <Address>134226478</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -174,7 +174,7 @@
           <Type>0</Type>
           <LineNumber>110</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226472</Address>
+          <Address>134226464</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -188,25 +188,9 @@
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>55</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218666</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Core\Src\AT24C02.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/AT24C02.c\55</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
           <LineNumber>59</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218672</Address>
+          <Address>134218668</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -218,11 +202,11 @@
           <Expression>\\Test_code\../Core/Src/AT24C02.c\59</Expression>
         </Bp>
         <Bp>
-          <Number>4</Number>
+          <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>64</LineNumber>
+          <LineNumber>63</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218684</Address>
+          <Address>134218680</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -231,7 +215,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\Core\Src\AT24C02.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Test_code\../Core/Src/AT24C02.c\64</Expression>
+          <Expression>\\Test_code\../Core/Src/AT24C02.c\63</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
