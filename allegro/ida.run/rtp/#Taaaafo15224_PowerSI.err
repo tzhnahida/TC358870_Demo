@@ -1,0 +1,21 @@
+[2026/06/29-18:58:55]--Environment: Mesh on.
+[2026/06/29-18:58:55]--
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI1_DATA0_N] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI1_DATA0_P] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI0_DATA3_N] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI0_DATA1_N] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI0_DATA3_P] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI0_DATA1_P] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI1_DATA2_N] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [MIPI_DSI1_DATA2_P] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [SDA] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [SDA] lacks pad and/or antipad values in padstack [PTH_C669SLOT433X433S4].
+                       WARNING [Signal Net Padstack]: Signal net [SCL] lacks pad and/or antipad values in padstack [VIA12].
+                       WARNING [Signal Net Padstack]: Signal net [SCL] lacks pad and/or antipad values in padstack [PTH_S669SLOT433X433S4].
+                       ****Summary: Miscellaneous check, Error(s) = 0, Warning(s) = 12
+[2026/06/29-18:58:55]--
+                       ****Summary: Variables checks, Error(s) = 0, Warning(s) = 0
+[2026/06/29-18:58:55]--
+                       0 error(s) 12 warning(s) found in SPD file "#Taaaafo15224.spd"
+                       
+                       

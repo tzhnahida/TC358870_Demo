@@ -1,0 +1,69 @@
+.SUBCKT		#Taaaafg15224_062926_185842_25852_S
++			U9_A3
++			U9_B3
++			U9_C1
++			U9_C2
++			U9_D1
++			U9_D2
++			U9_D4
++			U9_E1
++			U9_E2
++			U9_E4
++			U9_F1
++			U9_F2
++			U9_F4
++			U9_H1
+*The following is the Cadence MCP(model connection protocol) Section
+***********************************
+*[MCP Begin]
+*[MCP Ver] 1.1
+*[MCP Source] Cadence Design Systems, Inc. Layout Workbench 21.1.4.11171.321455   004 6/29/2026
+*
+***********************************
+*
+*[REM]The following is the info for component connection U9
+*[REM]**********************************
+*[Connection] U9 TC358870XBG_1_VFBGA80_(S1+S2+S3+S4)_TC358870XBG(NOK)_TC358870XBG(NOK) 80
+*[Power Nets]
+*[Ground Nets]
+*D4	U9_D4	GND	0.0265727	0.1082647
+*E4	U9_E4	GND	0.0265727	0.1076145
+*F4	U9_F4	GND	0.0265727	0.1069645
+*H1	U9_H1	GND	0.0246228	0.1056645
+*[Signal Nets]
+*A3	U9_A3	SCL	0.0259227	0.1102147
+*B3	U9_B3	SDA	0.0259227	0.1095647
+*C1	U9_C1	HDMI_CLK_P	0.0246228	0.1089147
+*C2	U9_C2	HDMI_CLK_N	0.0252727	0.1089147
+*D1	U9_D1	HDMI_DATA0_P	0.0246228	0.1082647
+*D2	U9_D2	HDMI_DATA0_N	0.0252727	0.1082647
+*E1	U9_E1	HDMI_DATA1_P	0.0246228	0.1076145
+*E2	U9_E2	HDMI_DATA1_N	0.0252727	0.1076145
+*F1	U9_F1	HDMI_DATA2_P	0.0246228	0.1069645
+*F2	U9_F2	HDMI_DATA2_N	0.0252727	0.1069645
+*
+*[MCP End]
+*
+*This concludes the MCP section
+*Define the S element, the Model file is output from BNP
+
+.MODEL   Spara   S		
++		TSTONEFILE = "#Taaaafg15224_062926_185842_25852_S.ts"
+
+S		
++			U9_A3	U9_D4
++			U9_B3	U9_D4
++			U9_F1	U9_H1
++			U9_F2	U9_F4
++			U9_C1	U9_D4
++			U9_C2	U9_D4
++			U9_E1	U9_H1
++			U9_E2	U9_E4
++			U9_D1	U9_D4
++			U9_D2	U9_D4
++			MNAME = Spara
+
+*
+.ENDS
+*
+*
