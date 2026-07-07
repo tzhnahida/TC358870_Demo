@@ -77,6 +77,8 @@ typedef enum {
 } EDID_StatusTypeDef;
 
 
+
+
 /* --------------------------------------------------------------------------
  * API 函数
  * -------------------------------------------------------------------------- */
@@ -89,5 +91,8 @@ EDID_StatusTypeDef EDID_Write(uint8_t *pEDID, uint16_t size);
 
 /** @brief 校验 EDID 数据完整性 (头/校验和/扩展块) */
 EDID_StatusTypeDef EDID_Validate(uint8_t *pEDID, uint16_t size);
+
+
+extern const uint8_t edid_ls029b3sx01[256]; /**< 内置 LS029B3SX01 LCD 面板 EDID 模板 */
 
 #endif /* __EDID_H__ */
