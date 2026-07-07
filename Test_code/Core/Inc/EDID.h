@@ -92,6 +92,9 @@ EDID_StatusTypeDef EDID_Write(uint8_t *pEDID, uint16_t size);
 /** @brief 校验 EDID 数据完整性 (头/校验和/扩展块) */
 EDID_StatusTypeDef EDID_Validate(uint8_t *pEDID, uint16_t size);
 
+/** @brief EDID 初始化: 读 EEPROM → 校验 → 无效则回退内置模板 */
+EDID_StatusTypeDef EDID_Init(void);
+
 
 extern const uint8_t edid_ls029b3sx01[256]; /**< 内置 LS029B3SX01 LCD 面板 EDID 模板 */
 

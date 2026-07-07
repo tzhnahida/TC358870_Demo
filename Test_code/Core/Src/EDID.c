@@ -167,3 +167,45 @@ const uint8_t edid_ls029b3sx01[256] = {
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x54,
 };
+
+/**
+ * @brief  EDID 初始化 — 从 EEPROM 读取并校验, 失败则回退到内置模板
+ *
+ * 流程:
+ *   1. 从 AT24C02 读取 256 字节 EDID
+ *   2. 校验 EDID 完整性 (头/校验和/扩展块)
+ *   3. 校验通过 → 返回 EDID_STATUS_SUCCESS
+ *   4. 校验失败 → 将内置模板 edid_ls029b3sx01 写入 EEPROM
+ *   5. 写入成功 → 返回 EDID_STATUS_FALLBACK_USED (降级)
+ *
+ * @retval EDID_STATUS_SUCCESS         EEPROM 中 EDID 有效, 无需干预
+ * @retval EDID_STATUS_FALLBACK_USED   EDID 无效, 已用内置模板覆盖
+ * @retval EDID_STATUS_READ_FAIL       EEPROM 读取失败 (总线异常)
+ * @retval EDID_STATUS_WRITE_FAIL      EEPROM 写入失败 (总线异常)
+ *
+ * @note   此函数应在 TC358870 复位释放前调用, 确保 DDC 总线上存在
+ *         有效 EDID 后再设 EDID_MODE=0x00 直通给 HDMI 源端。
+ */
+EDID_StatusTypeDef EDID_Init(void)
+{
+    EDID_StatusTypeDef status = EDID_STATUS_SUCCESS;
+    uint8_t edidBuffer[256] = {0};
+    status = EDID_Read(edidBuffer, sizeof(edidBuffer));
+    if (status != EDID_STATUS_SUCCESS)
+    {
+        return status;
+    }
+    status = EDID_Validate(edidBuffer, sizeof(edidBuffer));
+    if (status == EDID_STATUS_SUCCESS)
+    {
+        return status; // EDID 有效, 直接使用
+    }
+
+    // EDID 无效, 用内置模板覆盖 EEPROM
+    status = EDID_Write((uint8_t *)edid_ls029b3sx01, sizeof(edid_ls029b3sx01));
+    if (status != EDID_STATUS_SUCCESS)
+    {
+        return status; // 写入失败, 无法恢复
+    }
+    return EDID_STATUS_FALLBACK_USED; // 已回退到内置模板
+}
